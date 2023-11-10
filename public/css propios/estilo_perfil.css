@@ -1,16 +1,23 @@
-#lateral2{
-    background-color: #FFF7FA;
-}
-
-#btnGuardarPerfil
-    .navbar-toggler {
+    #lateral2 {
+        background-color: #FFF7FA;
+    }
+    
+    h1 {
+        font-family: 'KG Take On The World';
+        font-size: 50px;
+    }
+    
+    #btnGuardarPerfil .navbar-toggler {
         border: 0px;
-      }
-#btnGuardarPerfil, #btnCerrarSesion{
+    }
+    
+    #btnGuardarPerfil,
+    #btnCerrarSesion {
         background-color: #fff;
         border: 0px;
-        
-      }
-    #btnGuardarPerfil img, #btnCerrarSesion img{
+    }
+    
+    #btnGuardarPerfil img,
+    #btnCerrarSesion img {
         width: 80%;
     }
