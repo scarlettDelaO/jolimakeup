@@ -1,16 +1,15 @@
-        #texto {
-            background-color: #F3F2F2;
-            font-family: 'letters for Learners';
-            /*width: 542px;
-            height: 77;*/
-        }
-        
-        #imagen img {
-            width: 100%;
-        }
-        
-        #texto h1 {
-            height: 50%;
-            font-family: 'Holland';
-            font-size: "70";
-        }
+#texto {
+    background-color: #F3F2F2;
+    font-family: 'letters for Learners';
+    font-size: 28px;
+}
+
+#imagen img {
+    width: 100%;
+}
+
+#texto h1 {
+    height: 50%;
+    font-family: 'Holland';
+    font-size: 100px;
+}
