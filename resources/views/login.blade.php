@@ -8,13 +8,13 @@
             
             <div>
                 <br>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" placeholder="">
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" placeholder="">
             </div>
 
             <div>
-                <label for="correo">Correo electrónico:</label>
-                <input type="email" id="correo" name="correo" placeholder="">
+                <label for="contra">Contraseña:</label>
+                <input type="password" id="contra" name="contra" placeholder="">
             </div>
 
             <div class="botones">
@@ -35,4 +35,6 @@
             </div>
         </div>
     </section>
+    <script type="text/javascript" src="validacion.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
     @endsection
