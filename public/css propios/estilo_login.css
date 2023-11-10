@@ -1,5 +1,8 @@
 body {
-    background-image: url(public/imagenes/v412_717.png);
+    background-image: url('/public/imagenes/v412_717.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .contenedor {
@@ -56,11 +59,30 @@ input {
     margin: 0 5px;
 }
 
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007BFF;
-    color: #fff;
+#1 {
+    background-color: #000000;
+    color: #FFCED6;
     border: none;
+    padding: 10px;
     cursor: pointer;
+}
+
+#1:hover {
+    background-color: #FFCED6;
+    color: #000000;
+    /* Cambia el color del texto al pasar el mouse */
+}
+
+#2 {
+    background-color: #FFCED6;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#2:hover {
+    background-color: #000000;
+    color: #FFCED6;
+    /* Cambia el color del texto al pasar el mouse */
 }

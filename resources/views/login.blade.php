@@ -18,7 +18,7 @@
             </div>
 
             <div class="botones">
-                <button onclick="iniciarSesion()">Iniciar Sesión</button>
+            <button id="1" onclick="iniciarSesion()">Iniciar Sesión</button>
 
                 <div class="o-container">
                     <div class="o-linea"></div>
@@ -26,7 +26,7 @@
                     <div class="o-linea"></div>
                 </div>
 
-                <button onclick="registrarse()">Registrarse</button>
+                <button id="2" onclick="registrarse()">Registrarse</button>
             </div>
         </div>
     </section>
