@@ -8,17 +8,19 @@
             
             <div>
                 <br>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre">
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" placeholder="">
             </div>
 
             <div>
-                <label for="correo">Correo electrónico:</label>
-                <input type="email" id="correo" name="correo" placeholder="Ingrese su correo electrónico">
+                <label for="contra">Contraseña:</label>
+                <input type="password" id="contra" name="contra" placeholder="">
             </div>
 
             <div class="botones">
-            <button id="1" onclick="iniciarSesion()">Iniciar Sesión</button>
+            <button id="btnIniciar" type="button" class="btn btn-primary mt-3">
+                    <img src="imagenes/IniciarSesion.png">
+                </button>
 
                 <div class="o-container">
                     <div class="o-linea"></div>
@@ -26,8 +28,13 @@
                     <div class="o-linea"></div>
                 </div>
 
-                <button id="2" onclick="registrarse()">Registrarse</button>
+                <button id="btnRegistrarse" type="button" class="btn btn-primary mt-3">
+                    <img src="imagenes/Registrarse.png">
+                </button>
+
             </div>
         </div>
     </section>
+    <script type="text/javascript" src="validacion.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
     @endsection

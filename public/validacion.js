@@ -1,7 +1,7 @@
 function validarInicio() {
     var correo, pw
-    correo = document.getElementById('email').value
-    pw = document.getElementById('contraseña').value
+    correo = document.getElementById('correo').value
+    pw = document.getElementById('contra').value
 
     if (correo == "" || pw == "") {
         alert("Falta Ingresar Datos");
