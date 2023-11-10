@@ -3,6 +3,7 @@
 <section class="row mt-5 mb-5">
         <div  class="col-sm-0 col-md-2 col-lg-3 "></div>
         <div id="formulario" class="col-sm-12 col-md-8 col-lg-6 p-5 mt-5 mb-5" >
+            <h3 class="text-center">Registro</h3>
             <form action="/../view/perfil" method=" post" onsubmit="return validarRegistro();">
                 <div class="mb-4 mt-4">
                   <label for="nom" class="ps-2">Nombre</label>
