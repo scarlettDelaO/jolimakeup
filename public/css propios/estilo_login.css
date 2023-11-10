@@ -33,11 +33,22 @@ input {
     box-sizing: border-box;
 }
 
-.botones {
-    display: flex;
-    flex-direction: column;
+#btnIniciar .navbar-toggler,
+#btnRegistrarse .navbar-toggler {
+    border: 0px;
+}
+
+#btnIniciar,
+#btnRegistrarse {
+    background-color: #f3f2f3;
+    border: 0px;
     align-items: center;
-    margin-top: 20px;
+    position: relative;
+}
+
+#btnIniciar img,
+#btnRegistrarse img {
+    width: 70%;
 }
 
 .o-container {
@@ -50,39 +61,11 @@ input {
 .o-linea {
     flex-grow: 1;
     height: 1px;
-    background-color: #ccc;
+    background-color: #000000;
     margin: 0 10px;
 }
 
 .o-letra {
     font-size: 20px;
     margin: 0 5px;
-}
-
-#1 {
-    background-color: #000000;
-    color: #FFCED6;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-
-#1:hover {
-    background-color: #FFCED6;
-    color: #000000;
-    /* Cambia el color del texto al pasar el mouse */
-}
-
-#2 {
-    background-color: #FFCED6;
-    color: rgb(0, 0, 0);
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-
-#2:hover {
-    background-color: #000000;
-    color: #FFCED6;
-    /* Cambia el color del texto al pasar el mouse */
 }
