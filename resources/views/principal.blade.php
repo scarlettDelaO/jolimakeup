@@ -1,5 +1,4 @@
-@extends('navbarRosa')
-@extends('footer')
+@extends('padreNF')
 @section('contenidoPrincipal')
 <section class="row">
       <div id="lateral" class="col-lg-1 mt-lg-5 mb-lg-5"></div>
