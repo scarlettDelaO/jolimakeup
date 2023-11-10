@@ -21,3 +21,6 @@ Route::get('/principal', function () {
     return view('principal');
 });
 
+Route::get('/perfil', function () {
+    return view('perfil');
+});
