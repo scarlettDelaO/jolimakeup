@@ -24,3 +24,7 @@ Route::get('/principal', function () {
 Route::get('/perfil', function () {
     return view('perfil');
 });
+
+Route::get('/ojos', function () {
+    return view('ojos');
+});
