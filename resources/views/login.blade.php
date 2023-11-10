@@ -3,7 +3,7 @@
 <section>
         <div class="contenedor">
            
-            <img id="logo" src="public/imagenes/logo1.png" alt="Logo">
+        <img src="imagenes/logo1inicio.png" alt="Logo" style="width:150px;" class="ms-lg-4">
 
             
             <div>
