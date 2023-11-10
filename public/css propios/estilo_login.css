@@ -19,28 +19,19 @@ body {
     background-color: #F3F2F2;
 }
 
-
-/* Centra los botones horizontalmente */
-
 .botones {
     text-align: center;
 }
-
-
-/* Estilos para los botones */
 
 #btnIniciar,
 #btnRegistrarse {
     background-color: #f3f2f3;
     border: 0px;
     display: inline-block;
-    /* Hace que los botones sean elementos en línea para centrarlos horizontalmente */
     margin: 10px;
-    /* Añade un margen entre los botones si es necesario */
     align-items: center;
     position: relative;
     padding: 10px;
-    /* Añade un espaciado interno a los botones */
 }
 
 #btnIniciar img,
