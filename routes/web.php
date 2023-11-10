@@ -21,11 +21,6 @@ Route::get('/principal', function () {
     return view('principal');
 });
 
-<<<<<<< HEAD
 Route::get('/perfil', function () {
     return view('perfil');
-=======
-Route::get('/login', function () {
-    return view('login');
->>>>>>> 0017ecbbadfa084a11f6d146f3d18556abf7dad4
 });
