@@ -13,12 +13,3 @@
     font-family: 'Holland';
     font-size: 100px;
 }
-
-a {
-    border-bottom: 1px solid #FF66B2;
-    color: #FF66B2;
-}
-
-a:hover {
-    text-decoration: none;
-}
