@@ -1,0 +1,16 @@
+#lateral2{
+    background-color: #FFF7FA;
+}
+
+#btnGuardarPerfil
+    .navbar-toggler {
+        border: 0px;
+      }
+#btnGuardarPerfil, #btnCerrarSesion{
+        background-color: #fff;
+        border: 0px;
+        
+      }
+    #btnGuardarPerfil img, #btnCerrarSesion img{
+        width: 80%;
+    }
