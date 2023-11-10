@@ -39,9 +39,10 @@
                             <!-- Puedes agregar un ícono o texto aquí si lo deseas -->
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end"> <!-- Cambiado para posicionar a la derecha -->
-                            <li><a class="dropdown-item text-start" href="#">Link 1</a></li>
-                            <li><a class="dropdown-item text-start" href="#">Link 2</a></li>
-                            <li><a class="dropdown-item text-start" href="#">Link 3</a></li>
+                            <li><a class="dropdown-item text-start" href="#">Ojos</a></li>
+                            <li><a class="dropdown-item text-start" href="#">Rostro</a></li>
+                            <li><a class="dropdown-item text-start" href="#">Labios</a></li>
+                            <li><a class="dropdown-item text-start" href="#">Tools</a></li>
                         </ul>
                     </div>
                 </div>
