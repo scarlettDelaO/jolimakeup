@@ -1,0 +1,36 @@
+body {
+    background-image: url('../imagenes/fondo_registro.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+/*body{
+    background-color: aqua;
+}*/
+
+body{
+    background-color:  #ffffff5e;
+}
+
+#formulario{
+    background-color: rgba(225, 225, 225, 0.7);
+}
+
+#btnGuardarPerfil
+    .navbar-toggler {
+        border: 0px;
+      }
+#btnGuardarPerfil, #btnCerrarSesion{
+        background-color: #ffffff00;
+        border: 0px;
+        
+      }
+    #btnGuardarPerfil img, #btnCerrarSesion img{
+        width: 80%;
+    }
+
+    input{
+        height: 56px;
+    }

@@ -32,3 +32,7 @@ Route::get('/ojos', function () {
 Route::get('/login', function () {
     return view('login');
 });
+
+Route::get('/registro', function () {
+    return view('registro');
+});

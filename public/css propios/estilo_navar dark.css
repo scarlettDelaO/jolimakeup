@@ -1,0 +1,11 @@
+nav {
+    background-color: #000;
+  }
+  .navbar-toggler {
+    border: 5px;
+  }
+  .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
