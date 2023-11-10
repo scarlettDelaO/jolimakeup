@@ -42,7 +42,7 @@
                 tabindex="-1"
               >
                 <div class="offcanvas-header" data-bs-theme="dark">
-                  <h5 class="offcanvas-title text-info">EMPRINNOS</h5>
+                  <h5 class="offcanvas-title text-info">Menú</h5>
                   <button
                     class="btn-close"
                     type="button"
