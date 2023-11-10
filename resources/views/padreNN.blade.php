@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css propios/estilo_navar dark.css">
     <link rel="stylesheet" type="text/css" href="css propios/estilo_principal.css">
     <link rel="stylesheet" type="text/css" href="css propios/estilo_registro.css">
+    <link rel="stylesheet" type="text/css" href="css propios/estilo_login.css">
 </head>
 <body>
     
