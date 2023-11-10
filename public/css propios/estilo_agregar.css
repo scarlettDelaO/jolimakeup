@@ -1,0 +1,48 @@
+
+body {
+    background-image: url('../imagenes/fondo_agregar.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+#formulario{
+    background-color: rgba(225, 225, 225, 0.8);
+}
+#desplegable button{
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    border: none;
+}
+
+#btnFotos{
+    width: 40%;
+    height: 40px;
+    border: none;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+#formulario ul{
+    width: 100%;
+}
+
+#btnGuardarPerfil
+    .navbar-toggler {
+        border: 0px;
+      }
+#btnGuardarPerfil, #btnCerrarSesion{
+        background-color: #ffffff00;
+        border: 0px;
+        
+      }
+    #btnGuardarPerfil img, #btnCerrarSesion img{
+        width: 80%;
+    }
+
+    input{
+        height: 50px;
+    }
+
