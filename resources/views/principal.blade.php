@@ -11,5 +11,4 @@
       </div>
       <div id="lateral" class="col-lg-1 mt-lg-5 mb-lg-5"></div>
 </section>
-@extends('footer')   
-@section('pie') 
+@extends('footer')    
