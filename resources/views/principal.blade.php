@@ -1,4 +1,5 @@
 @extends('navbarRosa')
+@extends('footer')
 @section('contenidoPrincipal')
 <section class="row">
       <div id="lateral" class="col-lg-1 mt-lg-5 mb-lg-5"></div>
@@ -11,4 +12,4 @@
       </div>
       <div id="lateral" class="col-lg-1 mt-lg-5 mb-lg-5"></div>
 </section>
-@extends('footer')    
+    

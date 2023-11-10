@@ -1,4 +1,4 @@
-
+@yield('contenidoPrincipal')
 <footer
           class="text-center text-lg-start text-white"
           style="background-color: #1D1C1C"
