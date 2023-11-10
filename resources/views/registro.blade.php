@@ -6,27 +6,27 @@
             <form action="/action_page.php">
                 <div class="mb-4 mt-4">
                   <label for="nom" class="ps-2">Nombre</label>
-                  <input type="text" class="form-control" id="nom" placeholder="Enter email" name="email">
+                  <input type="text" class="form-control" id="nom" placeholder="" name="email">
                 </div>
                 <div class="mb-4">
                   <label for="email" class="ps-2">Email</label>
-                  <input type="email" class="form-control" id="email" placeholder="Enter password" name="pswd">
+                  <input type="email" class="form-control" id="email" placeholder="" name="pswd">
                 </div>
                 <div class="mb-4">
                     <label for="tel" class="ps-2">Teléfono</label>
-                    <input type="text" class="form-control" id="tel" placeholder="Enter password" name="pswd">
+                    <input type="text" class="form-control" id="tel" placeholder="" name="pswd">
                   </div>
                   <div class="mb-4">
                     <label for="pais" class="ps-2">País</label>
-                    <input type="text" class="form-control" id="pais" placeholder="Enter password" name="pswd">
+                    <input type="text" class="form-control" id="pais" placeholder="" name="pswd">
                   </div>
                   <div class="mb-4">
                     <label for="direc" class="ps-2">Dirección</label>
-                    <input type="text" class="form-control" id="direc" placeholder="Enter password" name="pswd">
+                    <input type="text" class="form-control" id="direc" placeholder="" name="pswd">
                   </div>
                   <div class="mb-4">
                     <label for="contr" class="ps-2">Contraseña</label>
-                    <input type="password" class="form-control" id="contr" placeholder="Enter password" name="pswd">
+                    <input type="password" class="form-control" id="contr" placeholder="" name="pswd">
                   </div>
                 <div class=" text-end">
                 <button id="btnGuardarPerfil" type="button" class="btn btn-primary mt-3">
