@@ -21,7 +21,7 @@ class UserController extends Controller
         return view('perfil');
     }
 
-    public function ojos(){
+    public function cata(){
         return view('ojos');
     }
 

@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +20,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/principal', function () {
+/*Route::get('/principal', function () {
     return view('principal');
 });
 
@@ -39,4 +42,12 @@ Route::get('/registro', function () {
 
 Route::get('/agregar', function () {
     return view('agregar');
+});*/
+
+Route::controller(UserController::class)->group(function(){
+    Route::get('principal', 'home');
+    Route::get('login', 'login');
+    Route::get('registro', 'regi');
+    Route::get('perfil', 'per');
+    Route::get('ojos', 'cata');
 });
