@@ -1,7 +1,7 @@
-@extends('padreN')
+@extends('padreNN')
 @section('contenidoPrincipal')
 <section>
-        <div id="formulario" class="col-sm-12 col-md-8 col-lg-6 p-5 mt-5 mb-5 contenedor">
+        <div id="formulario" class=" text-center col-sm-12 col-md-8 col-lg-6 p-5 mt-5 mb-5 contenedor">
             <img id="logo" src="imagenes/logo1inicio.png" alt="Logo" class="ms-lg-4">
             
             <form action="/../view/perfil" method=" post" onsubmit="return validarInicio();">
