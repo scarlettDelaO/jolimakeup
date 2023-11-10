@@ -14,19 +14,19 @@
                 </div>
                 <div class="mb-4">
                     <label for="tel" class="ps-2">Teléfono</label>
-                    <input type="text" class="form-control" id="tel" placeholder="" name="pswd">
+                    <input type="text" class="form-control" id="tel" placeholder="" name="tel">
                   </div>
                   <div class="mb-4">
                     <label for="pais" class="ps-2">País</label>
-                    <input type="text" class="form-control" id="pais" placeholder="" name="pswd">
+                    <input type="text" class="form-control" id="pais" placeholder="" name="pais">
                   </div>
                   <div class="mb-4">
                     <label for="direc" class="ps-2">Dirección</label>
-                    <input type="text" class="form-control" id="direc" placeholder="" name="pswd">
+                    <input type="text" class="form-control" id="direc" placeholder="" name="dire">
                   </div>
                   <div class="mb-4">
                     <label for="contr" class="ps-2">Contraseña</label>
-                    <input type="password" class="form-control" id="contr" placeholder="" name="pswd">
+                    <input type="password" class="form-control" id="contr" placeholder="" name="contra">
                   </div>
                 <div class=" text-end">
                 <button id="btnGuardarPerfil" type="button" class="btn btn-primary mt-3">

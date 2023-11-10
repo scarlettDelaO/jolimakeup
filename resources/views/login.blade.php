@@ -1,9 +1,9 @@
 @extends('padreN')
 @section('contenidoPrincipal')
 <section>
-        <div class="contenedor">
+        <div id="formulario" class="col-sm-12 col-md-8 col-lg-6 p-5 mt-5 mb-5" class="contenedor">
            
-        <img src="imagenes/logo1inicio.png" alt="Logo" style="width:150px;" class="ms-lg-4">
+        <img id ="logo" src="imagenes/logo1inicio.png" alt="Logo"  class="ms-lg-4">
 
             
             <div>
