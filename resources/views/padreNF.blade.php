@@ -8,7 +8,6 @@
     <link rel="stylesheet" type="text/css" href="css propios/estilo_navar rosa.css">
     <link rel="stylesheet" type="text/css" href="css propios/estilo_principal.css">
     <link rel="stylesheet" type="text/css" href="css propios/estilo_productos.css">
-    <link rel="stylesheet" type="text/css" href="css propios/estilo_login.css">
 </head>
 <body>
     <head >
