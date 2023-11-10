@@ -28,3 +28,7 @@ Route::get('/perfil', function () {
 Route::get('/ojos', function () {
     return view('ojos');
 });
+
+Route::get('/login', function () {
+    return view('login');
+});
