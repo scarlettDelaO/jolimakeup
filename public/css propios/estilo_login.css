@@ -1,3 +1,7 @@
+body {
+    background-image: url(public/imagenes/v412_717.png);
+}
+
 .contenedor {
     width: 60%;
     margin: 10vh auto;
