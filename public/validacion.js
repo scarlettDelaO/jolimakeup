@@ -27,12 +27,12 @@ function validarInicio() {
 
 function validarRegistro() {
     var nom, correo, tel, pais, dire, pw
-    nom = document.getElementById('nombre').value
+    nom = document.getElementById('nom').value
     correo = document.getElementById('email').value
-    tel = document.getElementById('telefono').value
+    tel = document.getElementById('tel').value
     pais = document.getElementById('pais').value
-    dire = document.getElementById('direccion').value
-    pw = document.getElementById('contraseña').value
+    dire = document.getElementById('dire').value
+    pw = document.getElementById('contra').value
 
     if (nom == "" || correo == "" || tel == "" || pais == "" || dire == "" || pw == "") {
         alert("Falta Ingresar Datos");

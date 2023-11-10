@@ -41,7 +41,7 @@ input {
 
 #btnIniciar,
 #btnRegistrarse {
-    background-color: rgba(225, 225, 225, 0.7);
+    background-color: transparent;
     border: 0px;
     display: inline-block;
     margin: 10px;
