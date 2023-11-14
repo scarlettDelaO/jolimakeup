@@ -14,14 +14,14 @@
             <!-- NAV CONTAINER START -->
             <div class="row col-lg-12 col-md-12 col-sm-12 col-12 m-lg-0 m-md-0 m-sm-0 m-0">
                 <a href="" class="navbar-brand m-0 p-2 col-lg-10 col-md-9 col-sm-8 col-7 m-lg-0 m-md-0 m-sm-0 m-0">
-                    <img src="imagenes/logo1inicio.png" alt="Logo" style="width:180px;" class="ms-lg-4 ms-md-4 ms-sm-4 ms-1">
+                    <img src="imagenes/icon_casa.png" alt="Logo" style="width:40px;" class="ms-lg-4 ms-md-4 ms-sm-4 ms-1">
                 </a>
                 <div class="col-lg-2 row m-0 col-md-3 col-sm-4 col-5">
                     <a href="" class="navbar-brand text-info col-lg-4 col-md-4 col-sm-4 col-4 m-lg-0 m-md-0 m-sm-0 m-0">
-                        <img clas="m-0" src="imagenes/bolsa icon.png" alt="Logo" style="width:100%;">
+                        <img clas="m-0" src="imagenes/bolsa rosa.png" alt="Logo" style="width:100%;">
                     </a>
                     <a  clas="m-0" href="" class="navbar-brand text-info col-lg-4 col-md-4 col-sm-4 col-4 m-lg-0 m-md-0 m-sm-0 m-0">
-                        <img src="imagenes/user.png" alt="Logo" style="width:100%;">
+                        <img src="imagenes/user_rosa.png" alt="Logo" style="width:100%;">
                     </a>
                 <!-- NAV BUTTON  -->
                     <button
@@ -30,7 +30,7 @@
                         data-bs-toggle="offcanvas"
                         data-bs-target="#menuLateral"
                     >
-                        <img clas="m-0" src="imagenes/icon_menu.png" alt="Logo" style="width:100%;">
+                        <img clas="m-0" src="imagenes/menu rosa.png" alt="Logo" style="width:100%;">
                     </button>
                 </div>
               <!-- OFFCANVAS MAIN CONTAINER START -->
