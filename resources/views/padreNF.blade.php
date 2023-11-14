@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css propios/estilo_navar rosa.css">
     <link rel="stylesheet" type="text/css" href="css propios/estilo_principal.css">
     <link rel="stylesheet" type="text/css" href="css propios/estilo_productos.css">
+    <link rel="stylesheet" type="text/css" href="css propios/estilo_atencion.css">
 </head>
 <body class="row">
     <header class="row col-lg-12 col-md-12 col-sm-12 col-12 m-lg-0 m-md-0 m-sm-0 m-0 container-fluid">

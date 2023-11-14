@@ -25,4 +25,8 @@ class UserController extends Controller
         return view('ojos');
     }
 
+    public function ate(){
+        return view('atencion');
+    }
+
 }
