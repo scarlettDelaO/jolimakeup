@@ -141,7 +141,7 @@
         <div class="text-center p-3 row">
         <p class="col-3">Aviso de privacidad</p>
         <p class="col-3">Terminos y condiciones</p>
-        <a href="#!" class="col-3"><p>Atencion al cliente</p></a>
+        <a href="atencion" class="col-3"><p>Atencion al cliente</p></a>
         <p class="col-3">© 2020 Copyright:JM</p>
         </div>
         <!-- Copyright -->
