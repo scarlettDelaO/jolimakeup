@@ -22,7 +22,7 @@
                     <a href="" class="navbar-brand text-info col-lg-4 col-md-4 col-sm-4 col-4 m-lg-0 m-md-0 m-sm-0 m-0">
                         <img clas="m-0" src="imagenes/bolsa icon.png" alt="Logo" style="width:100%;">
                     </a>
-                    <a  clas="m-0" href="" class="navbar-brand text-info col-lg-4 col-md-4 col-sm-4 col-4 m-lg-0 m-md-0 m-sm-0 m-0">
+                    <a  clas="m-0" href="login" class="navbar-brand text-info col-lg-4 col-md-4 col-sm-4 col-4 m-lg-0 m-md-0 m-sm-0 m-0">
                         <img src="imagenes/user.png" alt="Logo" style="width:100%;">
                     </a>
                 <!-- NAV BUTTON  -->

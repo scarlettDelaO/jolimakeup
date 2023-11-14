@@ -41,4 +41,8 @@ class UserController extends Controller
         return view('atencion');
     }
 
+    public function prueba(){
+        return view('perfil');
+    }
+
 }

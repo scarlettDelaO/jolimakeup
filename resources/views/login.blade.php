@@ -1,11 +1,11 @@
 @extends('padreNN')
 @section('contenidoPrincipal')
-<section>
+<section id="login" class="mt-0 mb-0">
     <div id="formulario" class="text-center col-sm-12 col-md-8 col-lg-6 p-5 mt-5 mb-5 contenedor">
         <img id="logo" src="imagenes/logo1inicio.png" alt="Logo" class="ms-lg-4">
         
         <!-- Formulario modificado para iniciar sesión -->
-        <form action="perfil" method="post" onsubmit="return validarInicio();">
+        <form action="perfil" method="" onsubmit="return validarInicio();">
             <div class="form-group">
                 <br>
                 <br>
@@ -20,8 +20,8 @@
 
             <!-- Botón modificado para enviar el formulario -->
             
-            <button id="btnIniciar" type="submit" class="btn btn-primary mt-3">
-               <a href="/../view/perfil"><img src="imagenes/IniciarSesion.png"></a> 
+            <button id="btnIniciar" type="button" class="btn btn-primary mt-3">
+               <a href="perfil"><img src="imagenes/IniciarSesion.png"></a> 
             </button>
 
             <div class="o-container">

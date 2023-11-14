@@ -1,10 +1,10 @@
 @extends('padreNN')
 @section('contenidoPrincipal')
-<section class="row mt-5 mb-5">
-  <div  class="col-1 col-sm-1 col-md-2 col-lg-3 "></div>
+<section id="registro" class="row ">
+  <div  class=" mt-5 mb-5 col-1 col-sm-1 col-md-2 col-lg-3 "></div>
     <div id="formulario" class="col-10 col-sm-10 col-md-8 col-lg-6 p-5 mt-5 mb-5" >
       <h3 class="text-center">Registro</h3>
-        <form action="/../view/perfil" method=" post" onsubmit="return validarRegistro();">
+        <form action="perfil" method="" onsubmit="return validarRegistro();">
           <div class="mb-4 mt-4">
             <label for="nom" class="ps-2">Nombre</label>
             <input type="text" class="form-control" id="nom" placeholder="" name="nom">
@@ -38,6 +38,6 @@
       </div>
     <div class="col-1 col-sm-1 col-md-2 col-lg-3"></div>
   </section>
-<script type="text/javascript" src="/../public/validacion.js"></script>
+  <script type="text/javascript" src="validacion.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
 @endsection

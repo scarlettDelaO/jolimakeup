@@ -1,4 +1,4 @@
-body {
+#login {
     background-image: url('../imagenes/v412_717.png');
     background-size: cover;
     background-position: center;
@@ -6,7 +6,7 @@ body {
     height: 100%;
 }
 
-body {
+#login {
     background-color: #ffffff5e;
 }
 

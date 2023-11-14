@@ -31,7 +31,7 @@ function validarRegistro() {
     correo = document.getElementById('email').value
     tel = document.getElementById('tel').value
     pais = document.getElementById('pais').value
-    dire = document.getElementById('dire').value
+    dire = document.getElementById('direc').value
     pw = document.getElementById('contra').value
 
     if (nom == "" || correo == "" || tel == "" || pais == "" || dire == "" || pw == "") {
