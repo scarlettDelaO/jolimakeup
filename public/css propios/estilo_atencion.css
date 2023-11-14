@@ -4,8 +4,6 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
-    /* Se cambió a 100vh para asegurar que tome el alto completo de la ventana del navegador */
-    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,10 +16,11 @@ body {
     align-items: center;
 }
 
-#user {
+#tags label {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
 .container {
@@ -29,19 +28,16 @@ body {
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 1000px;
-    /* Asegúrate de que esta anchura sea adecuada para todas las pantallas */
     margin: auto;
     height: 455px;
-    /* Altura fija puede no ser flexible para diferentes contenidos */
+    border-radius: 20px;
 }
 
 .customer-service-form {
     width: 100%;
-    /* Ocupa el ancho del contenedor */
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Alinea los elementos hijos al centro */
 }
 
 .customer-service-form h2 {
@@ -50,25 +46,10 @@ body {
     margin-bottom: 20px;
 }
 
-.customer-service-form label {
-    display: flex;
-    justify-content: center;
-    /* Centra el contenido de la etiqueta */
-    align-items: center;
-    /* Alinea los elementos verticalmente */
-    margin-bottom: 10px;
-    cursor: pointer;
-    width: 100%;
-    /* Toma el ancho completo para facilitar la alineación */
-}
-
 .customer-service-form label input[type="radio"] {
     margin-right: 10px;
-    /* Espacio entre el radio button y su etiqueta */
+    justify-content: flex-start;
 }
-
-
-/* Resto del CSS para .other-issue, .user-info y #btnEnviar sigue igual */
 
 .customer-service-form .other-issue,
 .customer-service-form .user-info {
@@ -78,7 +59,17 @@ body {
     align-items: center;
 }
 
-.customer-service-form .other-issue input[type="text"],
+.customer-service-form .other-issue input[type="text"] {
+    padding: 10px;
+    margin-top: 5px;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: border-color 0.3s ease-in-out;
+}
+
 .customer-service-form .user-info input[type="text"] {
     padding: 10px;
     margin-top: 5px;
@@ -107,6 +98,5 @@ body {
 }
 
 #btnEnviar img {
-    max-width: 100%;
-    height: auto;
+    width: 18%;
 }
