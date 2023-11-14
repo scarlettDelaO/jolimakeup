@@ -2,25 +2,31 @@
     background-color: #fff;
     border: 2px solid #7D7D7D;
     box-shadow: 3px 3px 5px rgba(145, 145, 145, 0.658); /*Sombra*/
-}
-#demo img, #demo2 img, #demo3 img{
+  }
+  #demo img, #demo2 img, #demo3 img{
     border-radius: 15px;
-}
-
-article{
+  }
+  
+  article{
     background-color: #FFF7FA;
     border-radius: 10px;
-}
-
-p #precio{
+  }
+  
+  p #precio{
     font-size: 80px;
-}
-
-#btnGuardarPerfil
+  }
+  
+  h1{
+    letter-spacing: 3px;
+    font-size: 270%;
+  }
+  
+  
+  #btnGuardarPerfil
     .navbar-toggler {
         border: 0px;
       }
-#btnGuardarPerfil, #btnCerrarSesion{
+  #btnGuardarPerfil, #btnCerrarSesion{
         background-color: #ffffff00;
         border: 0px;
         
