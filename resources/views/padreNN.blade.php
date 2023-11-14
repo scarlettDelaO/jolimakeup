@@ -16,7 +16,7 @@
         <nav class="navbar navbar-dark">
             <!-- NAV CONTAINER START -->
             <div class="container-fluid">
-                <a href="" class="navbar-brand text-info">
+                <a href="principal" class="navbar-brand text-info">
                     <img src="imagenes/icon_casa.png" alt="Logo" style="width:37px;" class="ms-lg-4">
                 </a>
                 <div style="width: 70%"></div>
