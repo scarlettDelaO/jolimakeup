@@ -33,6 +33,10 @@ class UserController extends Controller
         return view('labios');
     }
 
+    public function cate4(){
+        return view('tools');
+    }
+
     public function ate(){
         return view('atencion');
     }
