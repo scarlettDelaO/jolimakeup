@@ -19,8 +19,9 @@
             </div>
 
             <!-- Botón modificado para enviar el formulario -->
+            
             <button id="btnIniciar" type="submit" class="btn btn-primary mt-3">
-                <img src="imagenes/IniciarSesion.png">
+               <a href="/../view/perfil"><img src="imagenes/IniciarSesion.png"></a> 
             </button>
 
             <div class="o-container">
