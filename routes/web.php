@@ -50,9 +50,11 @@ Route::controller(UserController::class)->group(function(){
     Route::get('registro', 'regi');
     Route::get('perfil', 'per');
     Route::get('ojos', 'cata');
+    Route::get('atencion', 'ate');
 });
 
 Route::controller(AdminController::class)->group(function(){
     Route::get('login', 'login');
     Route::get('agregar', 'agre');
 });
+
