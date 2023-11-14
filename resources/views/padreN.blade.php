@@ -14,7 +14,7 @@
         <nav class="navbar navbar-dark col-lg-12 col-md-12 col-sm-12 col-12 row m-lg-0 m-md-0 m-sm-0 m-0">
             <!-- NAV CONTAINER START -->
             <div class="row col-lg-12 col-md-12 col-sm-12 col-12 m-lg-0 m-md-0 m-sm-0 m-0">
-                <a href="" class="navbar-brand m-0 p-2 col-lg-10 col-md-9 col-sm-8 col-7 m-lg-0 m-md-0 m-sm-0 m-0">
+                <a href="principal" class="navbar-brand m-0 p-2 col-lg-10 col-md-9 col-sm-8 col-7 m-lg-0 m-md-0 m-sm-0 m-0">
                     <img src="imagenes/logo1inicio.png" alt="Logo" style="width:180px;" class="ms-lg-4 ms-md-4 ms-sm-4 ms-1">
                 </a>
                 <div class="col-lg-2 row m-0 col-md-3 col-sm-4 col-5">
@@ -55,16 +55,16 @@
                 >
                   <ul id="desp" class="navbar-nav fs-5 justify-content-evenly">
                     <li class="nav-item p-3 py-md-1 p-md-3">
-                      <a href="" class="nav-link pt-md-3 pb-3">Ojos</a>
+                      <a href="ojos" class="nav-link pt-md-3 pb-3">Ojos</a>
                     </li>
                     <li class="nav-item p-3 py-md-1 p-md-3">
-                      <a href="" class="nav-link pt-md-3 pb-3">Rostro</a>
+                      <a href="rostro" class="nav-link pt-md-3 pb-3">Rostro</a>
                     </li>
                     <li class="nav-item p-3 py-md-1 p-md-3">
-                      <a href="" class="nav-link pt-md-3 pb-3">Labios</a>
+                      <a href="labios" class="nav-link pt-md-3 pb-3">Labios</a>
                     </li>
                     <li class="nav-item p-3 py-md-1 p-md-3">
-                      <a href="" class="nav-link pt-md-3 pb-3">Tools</a>
+                      <a href="tools" class="nav-link pt-md-3 pb-3">Tools</a>
                     </li>
                   </ul>
                 </div>
