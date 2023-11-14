@@ -21,8 +21,12 @@ class UserController extends Controller
         return view('perfil');
     }
 
-    public function cata(){
+    public function cate1(){
         return view('ojos');
+    }
+
+    public function cate2(){
+        return view('rostro');
     }
 
     public function ate(){
