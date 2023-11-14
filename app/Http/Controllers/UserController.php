@@ -29,6 +29,10 @@ class UserController extends Controller
         return view('rostro');
     }
 
+    public function cate3(){
+        return view('labios');
+    }
+
     public function ate(){
         return view('atencion');
     }
