@@ -54,16 +54,16 @@
                 >
                   <ul id="desp" class="navbar-nav fs-5 justify-content-evenly">
                     <li class="nav-item p-3 py-md-1 p-md-3">
-                      <a href="" class="nav-link pt-md-3 pb-3">Ojos</a>
+                      <a href="ojos" class="nav-link pt-md-3 pb-3">Ojos</a>
                     </li>
                     <li class="nav-item p-3 py-md-1 p-md-3">
-                      <a href="" class="nav-link pt-md-3 pb-3">Rostro</a>
+                      <a href="rostro" class="nav-link pt-md-3 pb-3">Rostro</a>
                     </li>
                     <li class="nav-item p-3 py-md-1 p-md-3">
-                      <a href="" class="nav-link pt-md-3 pb-3">Labios</a>
+                      <a href="labios" class="nav-link pt-md-3 pb-3">Labios</a>
                     </li>
                     <li class="nav-item p-3 py-md-1 p-md-3">
-                      <a href="" class="nav-link pt-md-3 pb-3">Tools</a>
+                      <a href="tools" class="nav-link pt-md-3 pb-3">Tools</a>
                     </li>
                   </ul>
                 </div>
