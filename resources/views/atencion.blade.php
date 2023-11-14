@@ -18,8 +18,8 @@
 
 
   <div id="user" class="user-info">
-  <label for="username">Usuario:</label>
-  <input type="text" id="username" name="username">
+  <label for="username">Usuario:  <input type="text" id="username" name="username"></label>
+  
 </div>
     </div>
 
