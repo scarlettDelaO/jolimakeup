@@ -11,16 +11,16 @@
     <label><input type="radio" name="issue" value="extra_charges"> Cargos de más</label>
     <label><input type="radio" name="issue" value="cancel_order"> Cancelar pedido</label>
     <label><input type="radio" name="issue" value="wrong_product"> Producto incorrecto</label>
-    <label class="other-issue">
-      <input type="radio" name="issue" value="other"> Otro inconveniente:
-      <input type="text" name="other_issue" disabled>
-    </label>
-</div>
-    
+    <div class="other-issue">
+    <label><input type="radio" name="issue" value="other"> Otro inconveniente:</label>
+    <input type="text" name="other_issue" disabled>
+  </div>
 
-    <div id="user" class="user-info">
-      <label for="username">Usuario:</label>
-      <input type="text" id="username" name="username">
+
+  <div id="user" class="user-info">
+  <label for="username">Usuario:</label>
+  <input type="text" id="username" name="username">
+</div>
     </div>
 
     <button id="btnEnviar" type="button" class="btn btn-secondary mt-3">
