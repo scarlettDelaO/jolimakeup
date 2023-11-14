@@ -52,7 +52,7 @@ Route::controller(UserController::class)->group(function(){
     Route::get('ojos', 'cate1');
     Route::get('rostro', 'cate2');
     Route::get('labios', 'cate3');
-    Route::get('tools', 'cate3');
+    Route::get('tools', 'cate4');
     Route::get('atencion', 'ate');
 });
 
