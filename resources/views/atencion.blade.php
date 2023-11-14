@@ -13,14 +13,14 @@
         <nav class="navbar navbar-dark col-lg-12 col-md-12 col-sm-12 col-12 row m-lg-0 m-md-0 m-sm-0 m-0">
             <!-- NAV CONTAINER START -->
             <div class="row col-lg-12 col-md-12 col-sm-12 col-12 m-lg-0 m-md-0 m-sm-0 m-0">
-                <a href="" class="navbar-brand m-0 p-2 col-lg-10 col-md-9 col-sm-8 col-7 m-lg-0 m-md-0 m-sm-0 m-0">
-                    <img src="imagenes/icon_casa.png" alt="Logo" style="width:40px;" class="ms-lg-4 ms-md-4 ms-sm-4 ms-1">
+                <a href="principal" class="navbar-brand m-0 p-2 col-lg-10 col-md-9 col-sm-8 col-7 m-lg-0 m-md-0 m-sm-0 m-0">
+                    <img src="imagenes/icon_casa.png" alt="Logo" style="width:37px;" class="ms-lg-4 ms-md-4 ms-sm-4 ms-1">
                 </a>
                 <div class="col-lg-2 row m-0 col-md-3 col-sm-4 col-5">
                     <a href="" class="navbar-brand text-info col-lg-4 col-md-4 col-sm-4 col-4 m-lg-0 m-md-0 m-sm-0 m-0">
                         <img clas="m-0" src="imagenes/bolsa rosa.png" alt="Logo" style="width:100%;">
                     </a>
-                    <a  clas="m-0" href="" class="navbar-brand text-info col-lg-4 col-md-4 col-sm-4 col-4 m-lg-0 m-md-0 m-sm-0 m-0">
+                    <a  clas="m-0" href="perfil" class="navbar-brand text-info col-lg-4 col-md-4 col-sm-4 col-4 m-lg-0 m-md-0 m-sm-0 m-0">
                         <img src="imagenes/user_rosa.png" alt="Logo" style="width:100%;">
                     </a>
                 <!-- NAV BUTTON  -->
@@ -52,7 +52,7 @@
                 <div
                   class="offcanvas-body d-flex flex-column justify-content-between px-0 ms-4 me-4" style="width: 87%;"
                 >
-                  <ul id="desp" class="navbar-nav fs-5 justify-content-evenly">
+                <ul id="desp" class="navbar-nav fs-5 justify-content-evenly">
                     <li class="nav-item p-3 py-md-1 p-md-3">
                       <a href="ojos" class="nav-link pt-md-3 pb-3">Ojos</a>
                     </li>
