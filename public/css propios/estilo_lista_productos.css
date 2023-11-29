@@ -1,0 +1,101 @@
+h1 {
+    color: #000;
+    border: 2px solid rgb(255, 255, 255);
+    font-family: 'KG Take On The World';
+    font-size: 50px;
+}
+
+.table {
+    margin-top: 1rem;
+    /*border-collapse: collapse;*/
+    width: 89%;
+    position: relative;
+    left: 61.5px;
+}
+
+.table thead th {
+    background-color: #FFCED6;
+    border-bottom: 1px solid black;
+}
+
+.table tbody td {
+    background-color: #F3F2F2;
+    border-bottom: 1px solid black;
+}
+
+#btnAgregar {
+    background-color: transparent;
+    border: none;
+    position: relative;
+    left: 33px;
+}
+
+#btnBuscar {
+    background-color: transparent;
+    border: none;
+    position: relative;
+    right: 50px;
+}
+
+#btnAgregar img {
+    width: 80%;
+}
+
+#btnBuscar img {
+    width: 77%;
+    height: auto;
+}
+
+#main-container {
+    background: #F3F2F2;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.formulario-busqueda {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#buscar {
+    width: auto;
+    height: 40px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 0px;
+    background-color: #FFCED6;
+}
+
+#btnBuscar {
+    height: 35px;
+    padding: 0;
+    border-radius: 0px;
+}
+
+@media (max-width: 768px) {
+    .formulario-busqueda {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    #buscar,
+    #btnBuscar {
+        width: 100%;
+        right: 29px;
+    }
+    #btnBuscar {
+        width: 48.1%;
+    }
+    #btnAgregar {
+        position: relative;
+        left: 15px;
+    }
+    .table {
+        font-size: 12px;
+        width: 99%;
+        left: 0px;
+    }
+    #edit,
+    #delete {
+        height: 10px;
+    }
+}
