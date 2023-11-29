@@ -45,4 +45,7 @@ class UserController extends Controller
         return view('perfil');
     }
 
+    public function car(){
+        return view('carrito');
+    }
 }

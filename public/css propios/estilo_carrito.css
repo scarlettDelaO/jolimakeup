@@ -1,0 +1,101 @@
+#sectionCarrito {
+    background-image: url('../imagenes/fondo_carrito.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /*min-height: 100vh;*/
+    width: 100%;
+    
+}
+
+header{
+    width: 100%;
+}
+
+#sectionCarrito h2{
+    text-align: center;
+    color: #000;
+    letter-spacing: 4px;
+    padding: 1%;
+    height: 5%;
+    font-size: 40px;
+}
+
+/*
+#sectionCarrito, #sectionCarrito h2, #sectionCarrito div{
+    border:1px solid black;
+}*/
+
+#sectionCarrito input{
+    border: none;
+
+}
+
+#sectionCarrito p{
+    font-size: 20px;
+}
+
+#less, #plus{
+    background-color: none;
+    border: none;
+    padding: 0;
+}
+
+#sectionCarrito #input{
+    background-color: #ffced659;
+}
+
+#sectionCarrito #pu{
+    background-color: #00000000;
+    font-size: 22px;
+}
+
+@media screen and (max-width: 576px){
+    #sectionCarrito #pu{
+        background-color: #00000000;
+        font-size: 14px;
+    }
+    #descrip{
+        font-size: 14px;
+    }
+    #sectionCarrito #input{
+        font-size: 13px;
+    }
+}
+
+#quitar{
+    background-color: #00000000;
+    border: none;
+    outline: none;
+}
+
+#car th {
+    background-color: #F4F4F4 !important;
+}
+
+#tot th{
+    background-color: #ffced6a1 !important;
+}
+
+#tot input{
+    color: #000;
+}
+
+#car table{
+        border-collapse: collapse;
+}
+
+#car td{
+    border: 1px solid #F5F5F5;
+    text-align: center;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    table-layout: fixed;
+}
+

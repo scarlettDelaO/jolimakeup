@@ -55,6 +55,7 @@ Route::controller(UserController::class)->group(function(){
     Route::get('labios', 'cate3');
     Route::get('tools', 'cate4');
     Route::get('atencion', 'ate');
+    Route::get('carrito', 'car');
 });
 
 Route::controller(AdminController::class)->group(function(){
