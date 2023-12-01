@@ -13,4 +13,8 @@ class AdminController extends Controller
     public function agre(){
         return view('agregar');
     }
+
+    public function pro(){
+        return view('productos');
+    }
 }
