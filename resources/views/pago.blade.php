@@ -91,7 +91,7 @@
         </div>
         <div class="col-lg-7 col-md-8 col-sm-12 row m-0 pt-lg-2 ps-lg-5 pe-lg-5 pb-3" id="dtpago">
             <h2 class="col-lg-12 m-0 col-md-12 col-sm-12 pt-lg-0 pb-lg-0 pt-md-0 pb-md-0 pt-sm-0 pb-sm-0 mt-md-4 mb-md-2 mt-sm-4 mb-sm-2 mt-4 mb-2">PAGO</h2>
-            <form action="/" method="post" onsubmit="return validarPago();">
+            <form action="principal" method="post" onsubmit="return validarPago();">
               <div id="tarjeta" class="row col-lg-12 m-0 col-md-12 col-sm-12 col-12 mb-lg-4 mb-md-4 mb-sm-4 mb-4">
                 <p class="col-lg-12 m-0 col-md-12 col-sm-12 col-12">Tarjeta</p>
                 <div id="formTarjeta" class="row col-lg-12 m-0 pt-lg-2 col-md-12 pt-md-3 pb-md-3 col-sm-12 pt-sm-3 pb-sm-3 col-12 pt-3 pb-3">
