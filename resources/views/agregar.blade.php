@@ -13,12 +13,10 @@
         <div  class="col-sm-0 col-md-2 col-lg-3 "></div>
         <div id="formulario" class="col-sm-12 col-md-8 col-lg-6 p-5 mt-5 mb-5">
             <h1 class="text-center">Agregar</h1>
-            <form action="/action_page.php" class="ms-4 me-4">
-                <div class="mb-4 mt-4 row ps-3 text-sm-start">
-                    <label for="nom" class="ps-2">Foto/s</label>
-                    <button id="btnFotos" type="button">
-                        Elige archivo
-                    </button>
+            <form action="/action_page.php" class="ms-4 me-4" enctype="multipart/form-data">
+                <div class="mb-4 mt-4 row ps-3 pe-3 text-sm-start">
+                    <label for="imageInput" class="ps-2">Foto/s</label>
+                    <input type="file" id="imageInput" for="filePhoto" class="form-control pt-2 pb-3" multiple accept=".jpg, .jpeg, .png" onchange="validateImage()">
                 </div>
                 <div class="mb-4 mt-4 ">
                   <label for="nom" class="ps-2">Nombre</label>
@@ -26,11 +24,10 @@
                 </div>
                 <div class="mb-4">
                   <label for="email" class="ps-2">Descripcion</label>
-                  <textarea class="form-control text-start" rows="4" id="comment" name="text">
-                    Color
-                    Marca
-                    Textura
-                    Contenido</textarea>
+                  <input type="text" class="form-control mb-0" id="des" placeholder="Color" name="color">
+                  <input type="text" class="form-control mb-0" id="des" placeholder="Marca" name="marca">
+                  <input type="text" class="form-control mb-0" id="des" placeholder="Textura" name="textura">
+                  <input type="text" class="form-control mb-0" id="des" placeholder="Contenido" name="cont">
                 </div>
                 <div class="mb-4">
                     <label for="pais" class="ps-2">Categoria</label>

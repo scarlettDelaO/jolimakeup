@@ -21,7 +21,7 @@ h1 {
     border: none;
 }
 
-#btnFotos {
+#btnFotos{
     width: 40%;
     height: 40px;
     border: none;
@@ -48,6 +48,10 @@ h1 {
     width: 80%;
 }
 
-input {
+input, .form-control {
     height: 50px;
+}
+
+#des input{
+    border: 0px ;
 }
