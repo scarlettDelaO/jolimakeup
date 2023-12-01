@@ -17,4 +17,8 @@ class AdminController extends Controller
     public function pro(){
         return view('productos');
     }
+
+    public function modif(){
+        return view('modificar');
+    }
 }
