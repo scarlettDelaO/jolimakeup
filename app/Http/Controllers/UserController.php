@@ -48,4 +48,8 @@ class UserController extends Controller
     public function car(){
         return view('carrito');
     }
+
+    public function pay(){
+        return view('pago');
+    }
 }

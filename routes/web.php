@@ -56,6 +56,7 @@ Route::controller(UserController::class)->group(function(){
     Route::get('tools', 'cate4');
     Route::get('atencion', 'ate');
     Route::get('carrito', 'car');
+    Route::get('pago', 'pay');
 });
 
 Route::controller(AdminController::class)->group(function(){

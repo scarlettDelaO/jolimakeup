@@ -1,0 +1,75 @@
+#imagen  img{
+    opacity: 0.95;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+        min-height: 100%;
+}
+
+#dtpago h2{
+    color: black;
+}
+/*
+div,p,input{
+    border: 1px solid black;
+}*/
+
+#formTarjeta input, #formDireccion input, select{
+    height: 45px;
+    border-radius: 10px;
+    border: 1px solid #CFC8C9;
+    background-color: #FCFCFC;
+}
+#formTarjeta p, #formDireccion p{
+    height: 45px;
+    color: black;
+    font-size: 15px;
+}
+#tarjeta, #direccion{
+    color: #9D9797;
+}
+#formTarjeta, #formDireccion{
+    border: 2px solid #efececea;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 576px){
+    #imagen{
+        height: 100px;
+        width: 100%;
+        overflow: hidden;
+        object-fit: cover;
+    }
+
+    #imagen  img{
+        opacity: 0.5;
+        width: 100%;
+        margin-top: -35%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    #imagen{
+        height: 150px;
+        width: 100%;
+        overflow: hidden;
+        object-fit: cover;
+    }
+
+    #imagen  img{
+        opacity: 0.5;
+        width: 100%;
+        margin-top: -38%;
+    }
+}
+
+@media screen and (max-width: 992px){
+    #imagen  img{
+        opacity: 0.95;
+        width: 100%;
+        object-fit: cover;
+        min-height: 100%;
+
+    }
+}
+

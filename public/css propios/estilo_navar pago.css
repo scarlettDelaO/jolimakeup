@@ -1,0 +1,47 @@
+nav {
+    background-color: #E3E4E5;
+  }
+  .offcanvas {
+    background-color: #000;
+  }
+  .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  h2{
+    text-align: center;
+    color: #FFCED6;
+    letter-spacing: 4px;
+  }
+/*
+  head, nav, a, div{
+    border: solid 1px;
+  }
+
+  div{
+    border: solid 1px #ff6565;
+  }*/
+    .navbar-nav > li:hover {
+      background-color: #ffe4ff11;
+    }
+  .my-button {
+    background-color: #4caf4f00;
+    border: none;
+    border-radius: 5px;
+  }
+
+  #desp a{
+    color: #FFCED6;
+  }
+
+  #desp li{
+    border-top: solid 1px #FFCED6;
+    border-bottom: solid 1px #FFCED6;
+  }
+
+  #bt button{
+    background-color: #00000000;
+    border: none;
+    outline: none;
+  }
