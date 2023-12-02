@@ -55,13 +55,13 @@
                 >
                   <ul id="desp" class="navbar-nav fs-5 justify-content-evenly">
                     <li class="nav-item p-3 py-md-1 p-md-3">
-                      <a href="#" class="nav-link pt-md-3 pb-3">Productos</a>
+                      <a href="productos" class="nav-link pt-md-3 pb-3">Productos</a>
                     </li>
                     <li class="nav-item p-3 py-md-1 p-md-3">
-                      <a href="#" class="nav-link pt-md-3 pb-3">Ventas</a>
+                      <a href="ventas" class="nav-link pt-md-3 pb-3">Ventas</a>
                     </li>
                     <li class="nav-item p-3 py-md-1 p-md-3">
-                      <a href="#" class="nav-link pt-md-3 pb-3">Cerrar sesión</a>
+                      <a href="principal" class="nav-link pt-md-3 pb-3">Cerrar sesión</a>
                     </li>
                   </ul>
                 </div>
