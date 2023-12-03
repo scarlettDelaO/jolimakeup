@@ -72,5 +72,7 @@
     </header>
     @yield('contenidoPrincipal')
   <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+  
+  <script type="text/javascript" src="eliminar.js"></script>
 </body>
 </html>
