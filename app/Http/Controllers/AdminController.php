@@ -36,19 +36,19 @@ class AdminController extends Controller
             'precio' => 'required|numeric',
         ]);
 
-        $products=new Product;
-        $products->name=$request->nombre;
-        $products->color=$request->color;
-        $products->brand=$request->marca;
-        $products->texture=$request->textura;
-        $products->content=$request->cont;
-        $products->category_id = $request->cate;
-        $products->price=$request->precio;
+        $product=new Product;
+        $product->name=$request->nombre;
+        $product->color=$request->color;
+        $product->brand=$request->marca;
+        $product->texture=$request->textura;
+        $product->content=$request->cont;
+        $product->category_id = $request->cate;
+        $product->price=$request->precio;
 
-        $products->save();
+        $product->save();
 
-        $products=Product::all();
-        return redirect()->back()->with('success', 'Producto agregado con éxito');
+        $product=Product::all();
+        return redirect()->route('productos')>with('success', 'Producto agregado con éxito');
 
 
     }
@@ -67,11 +67,11 @@ class AdminController extends Controller
     }
 
     public function edit($id){
-        $products = Product::findOrFail($id);
-        return view('modificar', compact('products'));
+        $product = Product::find($id);
+    return view('modificar', compact('product'));
     }
     
-    public function update(Request $request, $id){
+    public function update(Request $request,  $id){
         $validatedData = $request->validate([
             'nombre' => 'required|max:255',
             'color' => 'required',
@@ -82,21 +82,20 @@ class AdminController extends Controller
             'precio' => 'required|numeric',
         ]);
 
-        $product = Product::findOrFail($id);
+        $product = Product::find($id);
 
-        $product->name=$request->nombre;
-        $product->color=$request->color;
-        $product->brand=$request->marca;
-        $product->texture=$request->textura;
-        $product->content=$request->cont;
+        $product->name = $request->nombre;
+        $product->color = $request->color;
+        $product->brand = $request->marca;
+        $product->texture = $request->textura;
+        $product->content = $request->cont;
         $product->category_id = $request->cate;
-        $product->price=$request->precio;
-
+        $product->price = $request->precio;
 
         $product->save();
-        $product=Product::all();
-        
-        return redirect()->back()->with('success', 'Producto actualizado con éxito');
+
+        return redirect()->route('productos')->with('success', 'Producto actualizado con éxito');
+
 }
 
 

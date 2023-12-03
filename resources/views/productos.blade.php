@@ -45,7 +45,7 @@
                             <td>{{$product->price}}</td>
                             <td>
                             <a href="{{ route('modificar', ['id' => $product->id]) }}">
-                                <img src="{{ asset('imagenes/editar.png') }}" style="height: 30px;" alt="Editar">
+                                <img src="imagenes/editar.png" style="height: 30px;" alt="Editar">
                             </a>
                             </td>
                             <td>
