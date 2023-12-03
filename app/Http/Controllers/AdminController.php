@@ -82,19 +82,21 @@ class AdminController extends Controller
             'precio' => 'required|numeric',
         ]);
 
-        $products = Product::findOrFail($id);
+        $product = Product::findOrFail($id);
 
-        $products->name=$request->nombre;
-        $products->color=$request->color;
-        $products->brand=$request->marca;
-        $products->texture=$request->textura;
-        $products->content=$request->cont;
-        $products->category_id = $request->cate;
-        $products->price=$request->precio;
+        $product->name=$request->nombre;
+        $product->color=$request->color;
+        $product->brand=$request->marca;
+        $product->texture=$request->textura;
+        $product->content=$request->cont;
+        $product->category_id = $request->cate;
+        $product->price=$request->precio;
 
-        $products->save();
 
-        return redirect()->route('productos')->with('success', 'Producto actualizado con éxito');
+        $product->save();
+        $product=Product::all();
+        
+        return redirect()->back()->with('success', 'Producto actualizado con éxito');
 }
 
 

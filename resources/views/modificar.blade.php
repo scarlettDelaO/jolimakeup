@@ -68,7 +68,6 @@
         #des input {
             border: 0px;
         }
-
         .alerta-oculta {
             display: none;
             position: fixed;
@@ -87,6 +86,18 @@
             padding: 20px;
             border-radius: 5px;
             text-align: center;
+        }
+
+        #botonCerrar {
+            background-color: transparent;
+            border: none;
+            padding: 10px 20px;
+            text-transform: lowercase;
+            cursor: pointer;
+        }
+
+        #botonCerrar img {
+            width: 80%;
         }
     </style>
 
@@ -107,10 +118,10 @@
                 </div>
                 <div class="mb-4">
                     <label for="descColor" class="ps-2">Descripción</label>
-                    <input type="text" class="form-control mb-0" id="descColor" placeholder="Color" name="color" value="{{$products->color}}">
-                    <input type="text" class="form-control mb-0" id="descMarca" placeholder="Marca" name="marca" value="{{$products->brand}}">
-                    <input type="text" class="form-control mb-0" id="descTextura" placeholder="Textura" name="textura" value="{{$products->texture}}">
-                    <input type="text" class="form-control mb-0" id="descContenido" placeholder="Contenido" name="cont" value="{{$products->content}}">
+                    <input type="text" class="form-control mb-0" id="descColor"  name="color" value="{{$products->color}}">
+                    <input type="text" class="form-control mb-0" id="descMarca"  name="marca" value="{{$products->brand}}">
+                    <input type="text" class="form-control mb-0" id="descTextura"  name="textura" value="{{$products->texture}}">
+                    <input type="text" class="form-control mb-0" id="descContenido"  name="cont" value="{{$products->content}}">
                 </div>
                 <div class="mb-4">
                     <label for="cate" class="ps-2">Categoría</label>
@@ -124,7 +135,7 @@
                 </div>
                 <div class="mb-4">
                     <label for="prec" class="ps-2">Precio</label>
-                    <input type="text" class="form-control" id="prec" placeholder="" name="precio" value="{{$products->price}}">
+                    <input type="text" class="form-control" id="prec"  name="precio" value="{{$products->price}}">
                 </div>
                 <div class="d-flex justify-content-between mt-5">
                     <button id="btnGuardar" type="submit" class="btn btn-primary">
