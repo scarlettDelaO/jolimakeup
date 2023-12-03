@@ -94,7 +94,6 @@ class AdminController extends Controller
 
         $products->save();
 
-        $products=Product::all();
         return redirect()->route('productos')->with('success', 'Producto actualizado con éxito');
 }
 
