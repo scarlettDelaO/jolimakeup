@@ -31,16 +31,14 @@
                 </div>
                 <div class="mb-4">
                     <label for="desplegable" class="ps-2">Categoria</label>
-                    <div id="desplegable" class="dropdown text-end">
-                        <button type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown">
-                            <!-- Texto o ícono aquí si es necesario -->
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item text-start" href="#">Ojos</a></li>
-                            <li><a class="dropdown-item text-start" href="#">Rostro</a></li>
-                            <li><a class="dropdown-item text-start" href="#">Labios</a></li>
-                            <li><a class="dropdown-item text-start" href="#">Tools</a></li>
-                        </ul>
+                    <div id="desplegable" class="row col-lg-12 m-0 mt mt-lg-0 mb-lg-3 col-md-12 mt-md-0 mb-md-3 col-sm-12 mt-sm-2 mb-sm-2 col-12 mt-2 mb-3" >
+                    <select id="cate" class="form-control">
+                        <option value="" disabled selected>Seleccione una categoría</option>
+                        <option>Ojos</option>
+                        <option>Rostro</option>
+                        <option>Labios</option>
+                        <option>Tools</option>
+                    </select>
                     </div>
                 </div>
                 <div class="mb-4">
@@ -58,19 +56,22 @@
             </form>
         </div>
         <div class="col-sm-0 col-md-2 col-lg-3"></div>
+
         <!-- Alerta Agregar -->
         <div id="alertagregar" class="alerta-oculta">
             <div class="alerta-contenido">
                 <p>El producto ha sido agregado con éxito a la lista.</p>
-                <button id="botonCerrar" onclick="history.back()">
+                <a href="productos">
+                <button id="botonCerrar" >
                     <img src="imagenes/ok.png" >
                 </button>
+                </a>
             </div>
         </div>
     </section>
     <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
     
-    <script type="text/javascript" src="alert.js"></script>
+    <script type="text/javascript" src="agregar.js"></script>
     
 </body>
 </html>
