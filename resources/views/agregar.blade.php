@@ -13,40 +13,43 @@
         <div class="col-sm-0 col-md-2 col-lg-3 "></div>
         <div id="formulario" class="col-sm-12 col-md-8 col-lg-6 p-5 mt-5 mb-5">
             <h1 class="text-center">Agregar</h1>
-            <form action="/action_page.php" class="ms-4 me-4" enctype="multipart/form-data">
+            <form action="productos" method="post" class="ms-4 me-4" enctype="multipart/form-data">
+
+
+            @csrf
                 <div class="mb-4 mt-4 row ps-3 pe-3 text-sm-start">
                     <label for="imageInput" class="ps-2">Foto/s</label>
-                    <input type="file" id="imageInput" class="form-control pt-2 pb-3" multiple accept=".jpg, .jpeg, .png" onchange="validateImage()">
+                    <input type="file" id="imageInput" class="form-control pt-2 pb-3" multiple accept=".jpg, .jpeg, .png" name="foto" onchange="validateImage()">
                 </div>
                 <div class="mb-4 mt-4 ">
                   <label for="nom" class="ps-2">Nombre</label>
-                  <input type="text" class="form-control" id="nom" placeholder="Nombre del producto" name="nombre">
+                  <input type="text" class="form-control" id="name" placeholder="Nombre del producto" name="nombre">
                 </div>
                 <div class="mb-4">
                   <label for="desColor" class="ps-2">Descripcion</label>
-                  <input type="text" class="form-control mb-0" id="desColor" placeholder="Color" name="color">
-                  <input type="text" class="form-control mb-0" id="desMarca" placeholder="Marca" name="marca">
-                  <input type="text" class="form-control mb-0" id="desTextura" placeholder="Textura" name="textura">
-                  <input type="text" class="form-control mb-0" id="desContenido" placeholder="Contenido" name="cont">
+                  <input type="text" class="form-control mb-0" id="color" placeholder="Color" name="color">
+                  <input type="text" class="form-control mb-0" id="brand" placeholder="Marca" name="marca">
+                  <input type="text" class="form-control mb-0" id="texture" placeholder="Textura" name="textura">
+                  <input type="text" class="form-control mb-0" id="content" placeholder="Contenido" name="cont">
                 </div>
                 <div class="mb-4">
                     <label for="desplegable" class="ps-2">Categoria</label>
                     <div id="desplegable" class="row col-lg-12 m-0 mt mt-lg-0 mb-lg-3 col-md-12 mt-md-0 mb-md-3 col-sm-12 mt-sm-2 mb-sm-2 col-12 mt-2 mb-3" >
-                    <select id="cate" class="form-control">
-                        <option value="" disabled selected>Seleccione una categoría</option>
-                        <option>Ojos</option>
-                        <option>Rostro</option>
-                        <option>Labios</option>
-                        <option>Tools</option>
+                    <select id="category_id" class="form-control" name="cate">
+                    <option value="" disabled selected>Seleccione una categoría</option>
+                    <option value="1">Ojos</option> 
+                    <option value="2">Rostro</option> 
+                    <option value="3">Labios</option> 
+                    <option value="4">Tools</option>
                     </select>
                     </div>
                 </div>
                 <div class="mb-4">
                     <label for="precio" class="ps-2">Precio</label>
-                    <input type="text" class="form-control" id="precio" placeholder="Precio del producto" name="precio">
+                    <input type="text" class="form-control" id="price" placeholder="Precio del producto" name="precio">
                 </div>
                 <div class="d-flex justify-content-between mt-5">
-                    <button id="btnGuardar" type="button" class="btn btn-primary" onclick="agregarProducto()">
+                    <button id="btnGuardar" type="submit" class="btn btn-primary" >
                         <img src="imagenes/boton_agregar.png">
                     </button>
                     <button id="btnCancelar" type="button" class="btn btn-primary" onclick="history.back()">
@@ -58,20 +61,22 @@
         <div class="col-sm-0 col-md-2 col-lg-3"></div>
 
         <!-- Alerta Agregar -->
-        <div id="alertagregar" class="alerta-oculta">
-            <div class="alerta-contenido">
-                <p>El producto ha sido agregado con éxito a la lista.</p>
-                <a href="productos">
-                <button id="botonCerrar" >
-                    <img src="imagenes/ok.png" >
-                </button>
-                </a>
+        @if (session('success'))
+            <div id="alertAgregar" class="alerta-oculta">
+                <div class="alerta-contenido">
+                    <p>{{ session('success') }}</p>
+                    <button id="botonCerrar">
+                        <img src="imagenes/ok.png">
+                    </button>
+                </div>
             </div>
-        </div>
+        @endif
+
+
     </section>
     <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
-    
     <script type="text/javascript" src="agregar.js"></script>
+    
     
 </body>
 </html>

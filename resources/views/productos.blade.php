@@ -44,9 +44,9 @@
                             <td>{{$product->category->name}}</td>
                             <td>{{$product->price}}</td>
                             <td>
-                                <a href="modificar">
-                                    <img src="imagenes/editar.png" style="height: 30px;" alt="Editar">
-                                </a>
+                            <a href="{{ route('modificar', $products->id) }}">
+                                <img src="imagenes/editar.png" style="height: 30px;" alt="Editar">
+                            </a>
                             </td>
                             <td>
                                 <button style="height: 30px; background: none; border: none; padding: 0;" onclick="mostrarAlertaEliminar()">
