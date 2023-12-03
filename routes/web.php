@@ -64,6 +64,7 @@ Route::controller(AdminController::class)->group(function(){
     Route::get('agregar', 'agre');
     Route::post('productos','agregarPro');
     Route::get('productos', 'showProd');
+    Route::get('modificar','modif');
     Route::get('modificar/{id}', 'edit')->name('modificar');
     Route::put('modificar/{id}', 'update')->name('actualizar');
     Route::get('ventas', 'ven');

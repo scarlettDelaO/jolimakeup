@@ -65,7 +65,7 @@ class AdminController extends Controller
     public function modif(){
         return view('modificar');
     }
-    
+
     public function edit($id){
         $products = Product::findOrFail($id);
         return view('modificar', compact('products'));
@@ -84,16 +84,17 @@ class AdminController extends Controller
 
         $products = Product::findOrFail($id);
 
-        $products->name = $request->nombre;
-        $products->color = $request->color;
-        $products->brand = $request->marca;
-        $products->texture = $request->textura;
-        $products->content = $request->cont;
+        $products->name=$request->nombre;
+        $products->color=$request->color;
+        $products->brand=$request->marca;
+        $products->texture=$request->textura;
+        $products->content=$request->cont;
         $products->category_id = $request->cate;
-        $products->price = $request->precio;
+        $products->price=$request->precio;
 
         $products->save();
 
+        $products=Product::all();
         return redirect()->route('productos')->with('success', 'Producto actualizado con éxito');
 }
 
