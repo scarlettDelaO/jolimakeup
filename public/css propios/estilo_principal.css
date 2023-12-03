@@ -3,7 +3,7 @@
     color: pink;
 }
 
-#texto {
+#texto, #general {
     background-color: #F3F2F2;
     font-family: 'letters for Learners';
     font-size: 28px;
