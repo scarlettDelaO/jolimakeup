@@ -67,6 +67,6 @@ Route::controller(AdminController::class)->group(function(){
     Route::get('modificar','modif');
     Route::get('producto/{id}', 'edit')->name('modificar');
     Route::put('producto/{id}', 'update')->name('actualizar');
-    Route::get('ventas', 'ven');
+    Route::get('ventas', 'showVen');
 });
 

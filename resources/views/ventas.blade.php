@@ -25,15 +25,24 @@
                             </tr>
                         </thead>
                         <tbody>
+                        @foreach ($sales as $sale)
                             <tr>
-                                <td>1</td>
-                                <td>2023-09-03</td>
-                                <td>dvjose06</td>
-                                <td class="d-none d-md-table-cell">Calle de la Reforma 269 <br> Balderrame, Hermosillo, Son, C.P.83180</td>
-                                <td>1009.80</td>
+                                <td>{{ $sale->id }}</td>
+                                <td>{{ $sale->created_at->format('Y-m-d') }}</td>
+                                <td>{{ $sale->user->name }}</td>
+                                <td class="d-none d-md-table-cell">
+                                    @if ($sale->adress) 
+                                    {{ $sale->adress->reference }} {{ $sale->adress->houseNumber }}, {{ $sale->adress->neighborhood }}<br>
+                                    {{ $sale->adress->city }}, {{ $sale->adress->cp }}
+                                    @else
+                                        Dirección no disponible
+                                    @endif</td>
+                                <td>{{ $sale->total }}</td>
 
                             </tr>
+                            @endforeach
                         </tbody>
+
                     </table>
 
                 </div>

@@ -6,6 +6,12 @@ use Illuminate\Http\Request;
 
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\Sale;
+use App\Models\Adress;
+
+
+
+
 
 class AdminController extends Controller
 {
@@ -101,5 +107,10 @@ class AdminController extends Controller
 
     public function ven(){
         return view('ventas');
+    }
+
+    public function showVen(){
+        $sales = Sale::with('user', 'adress')->get();
+        return view('ventas', compact('sales'));
     }
 }
