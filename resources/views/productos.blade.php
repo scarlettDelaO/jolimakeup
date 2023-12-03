@@ -35,13 +35,14 @@
                             <th></th>
                         </tr>
                     </thead>
+                    @foreach($products as $product)
                     <tbody>
                         <tr>
-                            <td>1</td>
-                            <td>Delineador glitter de ojos líquido</td>
-                            <td class="d-none d-md-table-cell">Color: Dorado <br> Marca: Avierll <br> Textura: Gel <br> Contenido: 0.07 oz</td>
-                            <td>Ojos</td>
-                            <td>59.80</td>
+                            <td>{{$product->id}}</td>
+                            <td>{{$product->name}}</td>
+                            <td class="d-none d-md-table-cell">Color: {{$product->color}} <br> Marca: {{$product->brand}} <br> Textura: {{$product->texture}} <br> Contenido: {{$product->content}}</td>
+                            <td>{{$product->category->name}}</td>
+                            <td>{{$product->price}}</td>
                             <td>
                                 <a href="modificar">
                                     <img src="imagenes/editar.png" style="height: 30px;" alt="Editar">
@@ -54,6 +55,7 @@
                             </td>
                         </tr>
                     </tbody>
+                    @endforeach
                 </table>
             </div>
         </div>

@@ -62,7 +62,7 @@ Route::controller(UserController::class)->group(function(){
 Route::controller(AdminController::class)->group(function(){
     Route::post('login', 'login');
     Route::get('agregar', 'agre');
-    Route::get('productos', 'pro');
+    Route::get('productos', 'showProd');
     Route::get('modificar', 'modif');
     Route::get('ventas', 'ven');
 });
