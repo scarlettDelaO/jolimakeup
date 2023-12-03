@@ -8,10 +8,12 @@
                 <div style="border-bottom: 1px solid black;">
                     <div class="d-flex justify-content-between align-items-center mb-3">
 
+                        <a href="agregar">
                         <button id="btnAgregar" type="button" class="btn btn-primary">
                             <img src="imagenes/agregar.png" alt="Agregar">
                         </button>
 
+                        </a>
                         <form class="d-flex" id="search-form">
                             <input class="form-control me-2" type="text" placeholder="Buscar" id="buscar">
                             <button id="btnBuscar" class="btn btn-primary" type="button">
@@ -44,14 +46,14 @@
                                 <td>Ojos</td>
                                 <td>59.80</td>
                                 <td>
-                                    <a href="#">
+                                    <a href="modificar">
                                         <img src="imagenes/editar.png" style="height: 30px;" id="edit">
                                     </a>
                                 </td>
                                 <td>
-                                    <a href="#">
-                                        <img src="imagenes/eliminar.png" style="height: 30px;" id="delete">
-                                    </a>
+                                <button style="height: 30px; background: none; border: none; padding: 0;">
+                                    <img src="imagenes/eliminar.png" id="delete">
+                                </button>
                                 </td>
                             </tr>
                         </tbody>
@@ -60,5 +62,9 @@
 
             </div>
         </div>
+
+       
     </section>
+
+    
 @endsection
