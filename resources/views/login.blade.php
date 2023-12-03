@@ -5,7 +5,7 @@
         <img id="logo" src="imagenes/logo1inicio.png" alt="Logo" class="ms-lg-4">
         
         <!-- Formulario modificado para iniciar sesión -->
-        <form action="perfil" method="" onsubmit="return validarInicio();">
+        <form action="perfil" method="post" onsubmit="return validarInicio();">
             <div class="form-group">
                 <br>
                 <br>
