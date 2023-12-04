@@ -5,7 +5,7 @@
         <img id="logo" src="imagenes/logo1inicio.png" alt="Logo" class="ms-lg-4">
         
         <!-- Formulario modificado para iniciar sesión -->
-        <form action="perfil" method="post" onsubmit="return validarInicio();">
+        <form action="{{ route('login.action') }}" method="post" onsubmit="return validarInicio();">
             <div class="form-group">
                 <br>
                 <br>
@@ -20,8 +20,8 @@
 
             <!-- Botón modificado para enviar el formulario -->
             
-            <button id="btnIniciar" type="button" class="btn btn-primary mt-3">
-               <a href="perfil"><img src="imagenes/IniciarSesion.png"></a> 
+            <button id="btnIniciar" type="submit" class="btn btn-primary mt-3">
+               <img src="imagenes/IniciarSesion.png">
             </button>
 
             <div class="o-container">

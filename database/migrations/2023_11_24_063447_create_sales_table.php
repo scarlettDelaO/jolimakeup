@@ -19,6 +19,7 @@ return new class extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->bigInteger('adress_id')->unsigned(); // Corrección aquí
             $table->foreign('adress_id')->references('id')->on('adresses')->onDelete('cascade')->onUpdate('cascade');
+            $table->string('total');
             $table->timestamps();
         });
     }

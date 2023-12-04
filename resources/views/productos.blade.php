@@ -45,7 +45,7 @@
                             <td>{{$product->price}}</td>
                             <td>
                             <a href="{{ route('modificar', ['id' => $product->id]) }}">
-                                <img src="{{ asset('imagenes/editar.png') }}" style="height: 30px;" alt="Editar">
+                                <img src="imagenes/editar.png" style="height: 30px;" alt="Editar">
                             </a>
                             </td>
                             <td>
@@ -66,9 +66,13 @@
         <div class="alerta-contenido">
             <p>¿Seguro desea borrar el producto?</p>
             <p>¡Cuidado! El producto se borrará permanentemente.</p>
-            <button id="botonConfirmar" onclick="confirmarEliminar()">
-                <img src="imagenes/confirmar.png" alt="Confirmar">
-            </button>
+            <form action="{{route('eliminar', $product)}}" method="POST">
+                @csrf    
+                @method('DELETE')
+                <button id="botonConfirmar" onclick="confirmarEliminar()">
+                    <img src="imagenes/confirmar.png" alt="Confirmar">
+                </button>
+            </form>
             <button id="botonCancelar" onclick="ocultarAlertaEliminar()">
                 <img src="imagenes/boton_cancelar.png" alt="Cancelar">
             </button>

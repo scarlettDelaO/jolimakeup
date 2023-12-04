@@ -61,7 +61,7 @@
                       <a href="ventas" class="nav-link pt-md-3 pb-3">Ventas</a>
                     </li>
                     <li class="nav-item p-3 py-md-1 p-md-3">
-                      <a href="principal" class="nav-link pt-md-3 pb-3">Cerrar sesión</a>
+                      <a href="#" class="nav-link pt-md-3 pb-3" onclick="mostrarAlertaCerrarSesion()">Cerrar sesión</a>
                     </li>
                   </ul>
                 </div>
@@ -70,9 +70,22 @@
             </div>
         </nav>
     </header>
+
+    <!-- Alerta para confirmar el cierre de sesión -->
+    <div id="alertCerrarSesion" class="alerta-oculta" style="display: none;">
+        <div class="alerta-contenido">
+            <p>Has cerrado sesión con éxito. ¡Esperamos que vuelvas pronto!</p>
+            <button id="botonConfirmar">
+                <img src="imagenes/ok.png" alt="">
+            </button>
+        </div>
+    </div>
+
+
+
     @yield('contenidoPrincipal')
   <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
   
-  <script type="text/javascript" src="eliminar.js"></script>
+  <script type="text/javascript" src="cerrar.js"></script>
 </body>
 </html>

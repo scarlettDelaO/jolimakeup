@@ -19,7 +19,7 @@
                     <img src="imagenes/logo1inicio.png" alt="Logo" style="width:180px;" class="ms-lg-4 ms-md-4 ms-sm-4 ms-1">
                 </a>
                 <div class="col-lg-2 row m-0 col-md-3 col-sm-4 col-5">
-                    <a href="" class="navbar-brand text-info col-lg-4 col-md-4 col-sm-4 col-4 m-lg-0 m-md-0 m-sm-0 m-0">
+                    <a href="carrito" class="navbar-brand text-info col-lg-4 col-md-4 col-sm-4 col-4 m-lg-0 m-md-0 m-sm-0 m-0">
                         <img clas="m-0" src="imagenes/bolsa icon.png" alt="Logo" style="width:100%;">
                     </a>
                     <a  clas="m-0" href="login" class="navbar-brand text-info col-lg-4 col-md-4 col-sm-4 col-4 m-lg-0 m-md-0 m-sm-0 m-0">

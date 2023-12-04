@@ -6,6 +6,12 @@ use Illuminate\Http\Request;
 
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\Sale;
+use App\Models\Adress;
+
+
+
+
 
 class AdminController extends Controller
 {
@@ -36,20 +42,19 @@ class AdminController extends Controller
             'precio' => 'required|numeric',
         ]);
 
-        $products=new Product;
-        $products->name=$request->nombre;
-        $products->color=$request->color;
-        $products->brand=$request->marca;
-        $products->texture=$request->textura;
-        $products->content=$request->cont;
-        $products->category_id = $request->cate;
-        $products->price=$request->precio;
+        $product=new Product;
+        $product->name=$request->nombre;
+        $product->color=$request->color;
+        $product->brand=$request->marca;
+        $product->texture=$request->textura;
+        $product->content=$request->cont;
+        $product->category_id = $request->cate;
+        $product->price=$request->precio;
 
-        $products->save();
+        $product->save();
 
-        $products=Product::all();
-        return redirect()->back()->with('success', 'Producto agregado con éxito');
-
+        $product=Product::all();
+        return redirect()->route('productos')->with('success', 'Producto agregado con éxito');
 
     }
 
@@ -67,11 +72,11 @@ class AdminController extends Controller
     }
 
     public function edit($id){
-        $products = Product::findOrFail($id);
-        return view('modificar', compact('products'));
+        $product = Product::find($id);
+    return view('modificar', compact('product'));
     }
     
-    public function update(Request $request, $id){
+    public function update(Request $request,  $id){
         $validatedData = $request->validate([
             'nombre' => 'required|max:255',
             'color' => 'required',
@@ -82,23 +87,38 @@ class AdminController extends Controller
             'precio' => 'required|numeric',
         ]);
 
-        $products = Product::findOrFail($id);
+        $product = Product::find($id);
 
-        $products->name=$request->nombre;
-        $products->color=$request->color;
-        $products->brand=$request->marca;
-        $products->texture=$request->textura;
-        $products->content=$request->cont;
-        $products->category_id = $request->cate;
-        $products->price=$request->precio;
+        $product->name = $request->nombre;
+        $product->color = $request->color;
+        $product->brand = $request->marca;
+        $product->texture = $request->textura;
+        $product->content = $request->cont;
+        $product->category_id = $request->cate;
+        $product->price = $request->precio;
 
-        $products->save();
+        $product->save();
 
         return redirect()->route('productos')->with('success', 'Producto actualizado con éxito');
+
 }
+    public function destroy( $id){
+
+        $product = Product::find($id);
+        $product->delete();
+
+        return redirect()->route('productos');
+
+    }
+
 
 
     public function ven(){
         return view('ventas');
+    }
+
+    public function showVen(){
+        $sales = Sale::with('user', 'adress')->get();
+        return view('ventas', compact('sales'));
     }
 }

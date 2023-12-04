@@ -68,7 +68,6 @@
         #des input {
             border: 0px;
         }
-
         .alerta-oculta {
             display: none;
             position: fixed;
@@ -88,43 +87,56 @@
             border-radius: 5px;
             text-align: center;
         }
+
+        #botonCerrar {
+            background-color: transparent;
+            border: none;
+            padding: 10px 20px;
+            text-transform: lowercase;
+            cursor: pointer;
+        }
+
+        #botonCerrar img {
+            width: 80%;
+        }
     </style>
 
     <section class="row mt-5 mb-5">
         <div class="col-sm-0 col-md-2 col-lg-3 "></div>
         <div id="formulario" class="col-sm-12 col-md-8 col-lg-6 p-5 mt-5 mb-5">
             <h1 class="text-center">Modificar</h1>
-            <form action="{{ route('actualizar', $products->id) }}" method="post" class="ms-4 me-4" enctype="multipart/form-data">
+            <form action="{{ route('actualizar', $product->id) }}" method="post" class="ms-4 me-4" enctype="multipart/form-data">
                 @csrf
-                @method('PUT')
+                <input type="hidden" name="_method" value="PUT">
+            
                 <div class="mb-4 mt-4 row ps-3 pe-3 text-sm-start">
                     <label for="imageInput" class="ps-2">Foto/s</label>
                     <input type="file" id="imageInput" class="form-control pt-2 pb-3" multiple accept=".jpg, .jpeg, .png" onchange="validateImage()">
                 </div>
                 <div class="mb-4 mt-4 ">
-                    <label for="nom" class="ps-2">Nombre</label>
-                    <input type="text" class="form-control" id="nom" placeholder="" name="nombre" value="{{$products->name}}">
+                    <label for="nombre" class="ps-2">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="" name="nombre" value="{{$product->name}}">
                 </div>
                 <div class="mb-4">
-                    <label for="descColor" class="ps-2">Descripción</label>
-                    <input type="text" class="form-control mb-0" id="descColor" placeholder="Color" name="color" value="{{$products->color}}">
-                    <input type="text" class="form-control mb-0" id="descMarca" placeholder="Marca" name="marca" value="{{$products->brand}}">
-                    <input type="text" class="form-control mb-0" id="descTextura" placeholder="Textura" name="textura" value="{{$products->texture}}">
-                    <input type="text" class="form-control mb-0" id="descContenido" placeholder="Contenido" name="cont" value="{{$products->content}}">
+                    <label for="descri" class="ps-2">Descripción</label>
+                    <input type="text" class="form-control mb-0" id="color"  name="color" value="{{$product->color}}">
+                    <input type="text" class="form-control mb-0" id="marca"  name="marca" value="{{$product->brand}}">
+                    <input type="text" class="form-control mb-0" id="textura"  name="textura" value="{{$product->texture}}">
+                    <input type="text" class="form-control mb-0" id="cont"  name="cont" value="{{$product->content}}">
                 </div>
                 <div class="mb-4">
                     <label for="cate" class="ps-2">Categoría</label>
                     <select id="cate" class="form-control">
                         <option value="" disabled selected>Seleccione una categoría</option>
-                        <option value="1" {{ $products->category_id == 1 ? 'selected' : '' }}>Ojos</option> 
-                        <option value="2" {{ $products->category_id == 2 ? 'selected' : '' }}>Rostro</option> 
-                        <option value="3" {{ $products->category_id == 3 ? 'selected' : '' }}>Labios</option> 
-                        <option value="4" {{ $products->category_id == 4 ? 'selected' : '' }}>Tools</option>
+                        <option value="1" {{ $product->category_id == 1 ? 'selected' : '' }}>Ojos</option> 
+                        <option value="2" {{ $product->category_id == 2 ? 'selected' : '' }}>Rostro</option> 
+                        <option value="3" {{ $product->category_id == 3 ? 'selected' : '' }}>Labios</option> 
+                        <option value="4" {{ $product->category_id == 4 ? 'selected' : '' }}>Tools</option>
                     </select>
                 </div>
                 <div class="mb-4">
                     <label for="prec" class="ps-2">Precio</label>
-                    <input type="text" class="form-control" id="prec" placeholder="" name="precio" value="{{$products->price}}">
+                    <input type="text" class="form-control" id="prec"  name="precio" value="{{$product->price}}">
                 </div>
                 <div class="d-flex justify-content-between mt-5">
                     <button id="btnGuardar" type="submit" class="btn btn-primary">
@@ -140,30 +152,33 @@
 
         <!-- Alerta Modificar -->
         @if (session('success'))
-            <div id="alertModificar" class="alerta-oculta">
+            <div id="alertModi" class="alerta-oculta">
                 <div class="alerta-contenido">
                     <p>{{ session('success') }}</p>
                     <button id="botonCerrar">
-                        <img src="{{asset('imagenes/ok.png')}}">
+                        <img src="{{asset('imagenes/imagenes/ok.png')}}">
                     </button>
                 </div>
             </div>
         @endif
-    </section>
 
+        
+    </section>
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
-            if (document.getElementById('alertModificar')) {
-                document.getElementById('alertModificar').style.display = 'flex';
+            if (document.getElementById('alertModi')) {
+                document.getElementById('alertModi').style.display = 'flex';
             }
         });
 
 
         document.getElementById('botonCerrar').onclick = function() {
-            document.getElementById('alertModificar').style.display = 'none';
+            document.getElementById('alertModi').style.display = 'none';
             window.location.href = 'productos';
         };
     </script>
+
+    
     <script type="text/javascript" src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
     
 </body>
