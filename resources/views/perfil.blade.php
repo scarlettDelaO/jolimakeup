@@ -1,14 +1,16 @@
 @extends('padreN')
 @section('contenidoPrincipal')
-<section class="row">
-        <div id="lateral2" class="col-lg-4 p-lg-5 text-center">
-            <h1 class="mb-4 mt-5">Perfil</h1>
-            <img class="mt-5 mb-4 p-3" src="imagenes/img_perfil.png"style="width:90%;">
-            <button id="btnCerrarSesion" type="button" class="btn btn-primary mt-3 ">
+<section class="row col-md-12 col-sm-12 m-0">
+        <div id="lateral2" class="col-lg-4 p-lg-5 text-center col-md-4 col-sm-12 p-sm-0 row m-sm-0 col-12 m-0 p-0 mb-5 row">
+            <h1 class="col-lg-12 mb-lg-4 mt-lg-5 mt-md-3 mt-sm-2 col-sm-6 ms-sm-0 me-sm-0 col-md-12 mt-md-5 m-md-0 p-md-0 m-0">Perfil</h1>
+            <div id="perlat" class="col-lg-12 p-lg-3 col-sm-6 ms-sm-0 me-sm-0 ps-sm-5 pe-sm-5 pb-sm-0 col-md-12 m-md-0 p-md-0">
+              <img id="imper" class="mt-lg-1 mb-lg-4 p-lg-3 p-sm-2 mt-sm-4 mb-sm-0 col-md-12 mt-md-0 pt-md-0 p-5" src="imagenes/img_perfil.png"style="width:90%;">
+              <button id="btnCerrarSesion" type="button" class="btn btn-primary mt-lg-3 ">
                 <img src="imagenes/boton_cerrar.png">
-            </button>
+              </button>
+            </div>
         </div>
-        <div class="col-lg-8 p-5">
+        <div class="col-lg-8 col-md-8 p-5 col-sm-12">
             <form action="/action_page.php">
                 <div class="mb-4 mt-4">
                   <label for="nom" class="ps-2">Nombre</label>
