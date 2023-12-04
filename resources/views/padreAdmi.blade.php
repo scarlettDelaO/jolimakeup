@@ -75,7 +75,7 @@
     <div id="alertCerrarSesion" class="alerta-oculta" style="display: none;">
         <div class="alerta-contenido">
             <p>Has cerrado sesión con éxito. ¡Esperamos que vuelvas pronto!</p>
-            <button id="botonConfirmar">
+            <button id="botonCerrar">
                 <img src="imagenes/ok.png" alt="">
             </button>
         </div>
