@@ -54,7 +54,7 @@ class AdminController extends Controller
         $product->save();
 
         $product=Product::all();
-        return redirect()->route('productos')->with('success', 'Producto agregado con éxito');
+        return redirect()->route('productos')->with('success', 'El producto ha sido agregado con éxito a la lista.');
 
     }
 
@@ -99,7 +99,7 @@ class AdminController extends Controller
 
         $product->save();
 
-        return redirect()->route('productos')->with('success', 'Producto actualizado con éxito');
+        return redirect()->route('productos')->with('success', 'El producto ha sido modificado con éxito en la lista.');
 
 }
     public function destroy( $id){
