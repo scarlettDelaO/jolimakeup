@@ -49,9 +49,10 @@
                             </a>
                             </td>
                             <td>
-                                <button style="height: 30px; background: none; border: none; padding: 0;" onclick="mostrarAlertaEliminar()">
-                                    <img src="imagenes/eliminar.png" alt="Eliminar">
-                                </button>
+                            <button style="height: 30px; background: none; border: none; padding: 0;" onclick="mostrarAlertaEliminar({{ $product->id }})">
+                                <img src="imagenes/eliminar.png" alt="Eliminar">
+                            </button>
+                                
                             </td>
                         </tr>
                     </tbody>
@@ -69,33 +70,22 @@
             <form action="{{route('eliminar', $product)}}" method="POST">
                 @csrf    
                 @method('DELETE')
-                <button id="botonConfirmar" onclick="confirmarEliminar()">
+                <button id="botonConfirmar" type="submit">
                     <img src="imagenes/confirmar.png" alt="Confirmar">
                 </button>
+            
+                <button id="botonCancelar" onclick="ocultarAlertaEliminar()">
+                    <img src="imagenes/boton_cancelar.png" alt="Cancelar">
+                </button>
             </form>
-            <button id="botonCancelar" onclick="ocultarAlertaEliminar()">
-                <img src="imagenes/boton_cancelar.png" alt="Cancelar">
-            </button>
         </div>
     </div>
 </section>
 @endsection
 
-@push('scripts')
 <script>
-    function mostrarAlertaEliminar() {
+    function mostrarAlertaEliminar(productId) {
         document.getElementById('alertEli').style.display = 'flex';
-    }
-
-    function ocultarAlertaEliminar() {
-        document.getElementById('alertEli').style.display = 'none';
-    }
-
-    function confirmarEliminar() {
-        // Aquí puedes agregar la lógica para eliminar el producto.
-        // Por ejemplo, hacer una solicitud AJAX o redirigir a una ruta de Laravel.
-        console.log('Producto eliminado');
-        ocultarAlertaEliminar();
+        document.getElementById('deleteForm').action = '/producto/' + productId; 
     }
 </script>
-@endpush

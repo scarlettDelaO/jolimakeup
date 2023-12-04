@@ -60,9 +60,7 @@ Route::controller(UserController::class)->group(function(){
 });
 
 Route::controller(AdminController::class)->group(function(){
-    Route::post('login', 'login')
-    ->milddleware('auth.admin')
-    ->name('login');
+    Route::post('login', 'login');
     Route::get('agregar', 'agre');
     Route::post('productos','agregarPro');
     Route::get('productos', 'showProd')->name('productos');;
