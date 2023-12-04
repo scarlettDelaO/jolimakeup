@@ -66,9 +66,13 @@
         <div class="alerta-contenido">
             <p>¿Seguro desea borrar el producto?</p>
             <p>¡Cuidado! El producto se borrará permanentemente.</p>
-            <button id="botonConfirmar" onclick="confirmarEliminar()">
-                <img src="imagenes/confirmar.png" alt="Confirmar">
-            </button>
+            <form action="{{route('eliminar', $product)}}" method="POST">
+                @csrf    
+                @method('DELETE')
+                <button id="botonConfirmar" onclick="confirmarEliminar()">
+                    <img src="imagenes/confirmar.png" alt="Confirmar">
+                </button>
+            </form>
             <button id="botonCancelar" onclick="ocultarAlertaEliminar()">
                 <img src="imagenes/boton_cancelar.png" alt="Cancelar">
             </button>

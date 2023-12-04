@@ -54,8 +54,7 @@ class AdminController extends Controller
         $product->save();
 
         $product=Product::all();
-        return redirect()->route('productos')>with('success', 'Producto agregado con éxito');
-
+        return redirect()->route('productos')->with('success', 'Producto agregado con éxito');
 
     }
 
@@ -103,6 +102,15 @@ class AdminController extends Controller
         return redirect()->route('productos')->with('success', 'Producto actualizado con éxito');
 
 }
+    public function destroy( $id){
+
+        $product = Product::find($id);
+        $product->delete();
+
+        return redirect()->route('productos');
+
+    }
+
 
 
     public function ven(){
