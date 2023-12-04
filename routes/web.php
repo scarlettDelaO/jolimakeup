@@ -46,7 +46,7 @@ Route::get('/agregar', function () {
 
 Route::controller(UserController::class)->group(function(){
     Route::get('principal', 'home');
-    Route::get('login', 'login')->name('login.action');
+    Route::post('login', 'login');
     Route::get('perfil','prueba');
     Route::get('registro', 'regi');
     Route::get('perfil', 'per');
