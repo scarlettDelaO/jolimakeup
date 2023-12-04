@@ -60,7 +60,7 @@
             </table>
 
             <div class="col-lg-12 mt-lg-5 mb-5 col-md-12 mt-md-5 mb-md-5 col-sm-12 mt-sm-5 mb-sm-5 col-12 mt-5 mb-5">
-                <button id="less" class="col-lg-2 mt-lg-2 mb-lg-2  col-md-2 col-sm-3 col-4" ><img src="imagenes/boton_pagar.png" style="width: 100%;"></button>
+                <a href="pago"><button id="less" class="col-lg-2 mt-lg-2 mb-lg-2  col-md-2 col-sm-3 col-4" ><img src="imagenes/boton_pagar.png" style="width: 100%;" ></button></a>
             </div>
         </div>
         <div class="col-lg-1 col-md-1 col-sm-1 d-block"></div>

@@ -49,7 +49,7 @@
                     <input type="text" class="form-control" id="price" placeholder="Precio del producto" name="precio">
                 </div>
                 <div class="d-flex justify-content-between mt-5">
-                    <button id="btnGuardar" type="submit" class="btn btn-primary" >
+                    <button id="btnGuardar" type="submit" class="btn btn-primary" onclick="agregarProducto()" >
                         <img src="imagenes/boton_agregar.png">
                     </button>
                     <button id="btnCancelar" type="button" class="btn btn-primary" onclick="history.back()">
@@ -61,16 +61,16 @@
         <div class="col-sm-0 col-md-2 col-lg-3"></div>
 
         <!-- Alerta Agregar -->
-        @if (session('success'))
+        
             <div id="alertAgregar" class="alerta-oculta">
                 <div class="alerta-contenido">
-                    <p>{{ session('success') }}</p>
+                    <p>El producto ha sido agregado con éxito a la lista.</p>
                     <button id="botonCerrar">
                         <img src="imagenes/ok.png">
                     </button>
                 </div>
             </div>
-        @endif
+        
 
 
     </section>

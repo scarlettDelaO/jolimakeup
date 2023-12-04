@@ -17,7 +17,7 @@
                     <img src="imagenes/icon_casa.png" alt="Logo" style="width:37px;" class="ms-lg-4 ms-md-4 ms-sm-4 ms-1">
                 </a>
                 <div class="col-lg-2 row m-0 col-md-3 col-sm-4 col-5">
-                    <a href="" class="navbar-brand text-info col-lg-4 col-md-4 col-sm-4 col-4 m-lg-0 m-md-0 m-sm-0 m-0">
+                    <a href="carrito" class="navbar-brand text-info col-lg-4 col-md-4 col-sm-4 col-4 m-lg-0 m-md-0 m-sm-0 m-0">
                         <img clas="m-0" src="imagenes/bolsa rosa.png" alt="Logo" style="width:100%;">
                     </a>
                     <a  clas="m-0" href="perfil" class="navbar-brand text-info col-lg-4 col-md-4 col-sm-4 col-4 m-lg-0 m-md-0 m-sm-0 m-0">
@@ -42,7 +42,7 @@
                 <div class="offcanvas-header col-lg-12 col-md-12 col-sm-12 col-12 m-lg-0 m-md-0 m-sm-0 m-0 row">
                     <div class="col-9 m-0"></div>
                     <div class=" col-3 m-0 ps-3">
-                        <button class="my-button col-12" data-bs-dismiss="offcanvas">
+                        <button class="my-button col-12" data-bs-dismiss="offcanvas" >
                             <img src="imagenes/icon_cerrar.png" style="width: 100%;">
                         </button>
                     </div>

@@ -154,12 +154,12 @@
             <div class="col-lg-12 row">
               <div class="col-lg-3 col-md-3 m-0 col-sm-3 col-3"></div>
               <div class="m-0 p-0 col-lg-3 ps-lg-3 pe-lg-3 pt-lg-1 col-md-3 ps-md-3 pe-md-2 pt-md-1 col-sm-3 ps-sm-3 pe-sm-3 pt-sm-1 col-3 ps-1 pe-1 pt-1" id="bt">
-                <button type="reset">
+                <button type="reset" onclick="history.back()">
                   <img src="imagenes/boton_cancelarPago.png" alt="Logo" style="width:100%;">
                 </button>
               </div>
               <div class="m-0 p-0 col-lg-3 ps-lg-2 pe-lg-3 col-md-3 ps-md-2 pe-md-2 col-sm-3 ps-sm-2 pe-sm-3 col-3" id="bt">
-                <button type="submit" class="btn btn-primary" id="sub">
+                <button type="submit" class="btn btn-primary" id="sub" onclick="realizarPago()">
                   <img src="imagenes/boton_pagarPago.png" alt="Logo" style="width:100%;" class="m-0 p-0">
                 </button>
               </div>

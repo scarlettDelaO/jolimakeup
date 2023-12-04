@@ -54,7 +54,7 @@ class AdminController extends Controller
         $product->save();
 
         $product=Product::all();
-        return redirect()->route('productos')->with('success', 'El producto ha sido agregado con éxito a la lista.');
+        return redirect()->route('productos');
 
     }
 
