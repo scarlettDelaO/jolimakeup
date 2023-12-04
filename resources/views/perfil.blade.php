@@ -5,7 +5,7 @@
             <h1 class="col-lg-12 mb-lg-4 mt-lg-5 mt-md-3 mt-sm-2 col-sm-6 ms-sm-0 me-sm-0 col-md-12 mt-md-5 m-md-0 p-md-0 m-0">Perfil</h1>
             <div id="perlat" class="col-lg-12 p-lg-3 col-sm-6 ms-sm-0 me-sm-0 ps-sm-5 pe-sm-5 pb-sm-0 col-md-12 m-md-0 p-md-0">
               <img id="imper" class="mt-lg-1 mb-lg-4 p-lg-3 p-sm-2 mt-sm-4 mb-sm-0 col-md-12 mt-md-0 pt-md-0 p-5" src="imagenes/img_perfil.png"style="width:90%;">
-              <button id="btnCerrarSesion" type="button" class="btn btn-primary mt-lg-3 ">
+              <button id="btnCerrarSesion" type="submit" class="btn btn-primary mt-lg-3 " onclick="mostrarAlertaCerrarSesion()">
                 <img src="imagenes/boton_cerrar.png">
               </button>
             </div>
@@ -43,5 +43,18 @@
                 </div>
               </form>
         </div>
+        <!-- Alerta para confirmar el cierre de sesión -->
+    <div id="alertCerrarSesion" class="alerta-oculta" style="display: none;">
+        <div class="alerta-contenido">
+            <p>Has cerrado sesión con éxito. ¡Esperamos que vuelvas pronto!</p>
+            <button id="botonCerrar">
+                <img src="imagenes/ok.png" alt="">
+            </button>
+        </div>
+    </div>
+    
+
 </section>
+
+<script type="text/javascript" src="cerrar.js"></script>
 @endsection

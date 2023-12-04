@@ -6,6 +6,6 @@ function ocultarAlertaCerrarSesion() {
     document.getElementById('alertCerrarSesion').style.display = 'none';
 }
 
-document.getElementById('botonConfirmar').addEventListener('click', function() {
+document.getElementById('botonCerrar').addEventListener('click', function() {
     window.location.href = 'principal';
 });
