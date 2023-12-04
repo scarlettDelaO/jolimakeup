@@ -2,7 +2,7 @@
         background-color: #FFF7FA;
     }
     
-    h1 {
+    #lateral2 h1 {
         font-family: 'KG Take On The World';
         font-size: 50px;
     }
@@ -21,3 +21,36 @@
     #btnCerrarSesion img {
         width: 80%;
     }
+
+    @media screen and (max-width: 576px){
+        #perlat{
+          height: 5px;
+        }
+  
+        #perlat #imper{
+          height: 20px;
+        }
+      }
+  
+      @media screen and (max-width: 768px){
+        #lateral2 h1{
+          padding-top: 18%;
+        }   
+        #lateral2 #perlat{
+          height: 300px;
+        }
+  
+        #lateral2{
+          height: 350px;
+        }
+      }
+  
+      @media screen and (max-width: 992px){
+        #lateral2 h1{
+          height: 100px;
+        }
+  
+        #perlat{
+          height: 500px;
+        }
+      }
