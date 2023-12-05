@@ -62,6 +62,20 @@
         </div>
     </div>
 
+
+    <!--ALERT BUSCAR-->
+
+    <div id="alertAgregar" class="alerta-oculta">
+                <div class="alerta-contenido">
+                    <p>El producto ha sido encontrado con éxito.</p>
+                    <button id="botonCerrar">
+                        <img src="imagenes/ok.png">
+                    </button>
+                </div>
+            </div>
+
+
+
     <!-- Alerta Eliminar -->
     <div id="alertEli" class="alerta-oculta" style="display: none;">
         <div class="alerta-contenido">
@@ -89,3 +103,5 @@
         document.getElementById('deleteForm').action = '/producto/' + productId; 
     }
 </script>
+
+<script type="text/javascript" src="agregar.js"></script>

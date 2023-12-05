@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JoliMakeup</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css propios/estilo_navar pago.css">
     <link rel="stylesheet" type="text/css" href="css propios/estilo_pago.css">
@@ -13,7 +13,7 @@
         <nav class="navbar navbar-dark col-lg-12 col-md-12 col-sm-12 col-12 row m-lg-0 m-md-0 m-sm-0 m-0">
             <!-- NAV CONTAINER START -->
             <div class="row col-lg-12 col-md-12 col-sm-12 col-12 m-lg-0 m-md-0 m-sm-0 m-0">
-                <a href="" class="navbar-brand m-0 p-2 col-lg-6 col-md-7 col-sm-5 col-4 m-lg-0 m-md-0 m-sm-0 m-0 pt-lg-3">
+                <a href="principal" class="navbar-brand m-0 p-2 col-lg-6 col-md-7 col-sm-5 col-4 m-lg-0 m-md-0 m-sm-0 m-0 pt-lg-3">
                     <img src="imagenes/logo1inicio.png" alt="Logo" style="width:180px;" class="ms-lg-4 ms-md-4 ms-sm-4 ms-1">
                 </a>
                 <div class="row col-lg-6 m-0 p-0 col-md-5 col-sm-7 pt-sm-1 col-8 pt-2">
@@ -67,16 +67,16 @@
                 >
                   <ul id="desp" class="navbar-nav fs-5 justify-content-evenly">
                     <li class="nav-item p-3 py-md-1 p-md-3">
-                      <a href="" class="nav-link pt-md-3 pb-3">Ojos</a>
+                      <a href="ojos" class="nav-link pt-md-3 pb-3">Ojos</a>
                     </li>
                     <li class="nav-item p-3 py-md-1 p-md-3">
-                      <a href="" class="nav-link pt-md-3 pb-3">Rostro</a>
+                      <a href="rostro" class="nav-link pt-md-3 pb-3">Rostro</a>
                     </li>
                     <li class="nav-item p-3 py-md-1 p-md-3">
-                      <a href="" class="nav-link pt-md-3 pb-3">Labios</a>
+                      <a href="labios" class="nav-link pt-md-3 pb-3">Labios</a>
                     </li>
                     <li class="nav-item p-3 py-md-1 p-md-3">
-                      <a href="" class="nav-link pt-md-3 pb-3">Tools</a>
+                      <a href="tools" class="nav-link pt-md-3 pb-3">Tools</a>
                     </li>
                   </ul>
                 </div>
