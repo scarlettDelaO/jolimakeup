@@ -40,7 +40,7 @@ function validarRegistro() {
 
     } else {
         var letras = /^[A-Za-z]+$/;
-        if (!letras.test(nom)) {
+        if (letras.test(nom)) {
             alert("El Nombre Solo Permite Letras.");
             return false;
         }

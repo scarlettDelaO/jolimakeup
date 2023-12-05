@@ -48,7 +48,7 @@ Route::controller(UserController::class)->group(function(){
     Route::get('principal', 'home');
     //Route::post('login', 'login');
     Route::get('perfil','prueba');
-    Route::get('registro', 'regi');
+    Route::post('users','regUser');
     Route::get('perfil', 'per');
     Route::get('ojos', 'cate1');
     Route::get('rostro', 'cate2');
