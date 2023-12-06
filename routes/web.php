@@ -93,7 +93,33 @@ Route::fallback(function () {
     return view('404'); // Asumiendo que tienes una vista para errores 404
 });*/
 
+Route::controller(UserController::class)->group(function(){
 
+    // Rutas para vistas estáticas y procesos simples
+    Route::get('principal', 'home');
+    Route::get('login', 'lo')->name('login');
+    Route::get('registro', 'regi');
+    Route::get('ojos', 'cate1');
+    Route::get('rostro', 'cate2');
+    Route::get('labios', 'cate3');
+    Route::get('tools', 'cate4');
+    Route::get('atencion', 'ate');
+    Route::get('carrito', 'car');
+    Route::get('pago', 'pay');
+
+    // Rutas para procesos de usuario
+    Route::post('login', 'login')->name('doLogin');
+    Route::post('perfil/registrar', 'regUser'); // Ruta para registrar usuario
+
+    // Ruta para el perfil del usuario autenticado
+    Route::put('perfil', 'per')->name('perfil');
+
+    // Rutas para mostrar categorías de productos
+    Route::get('ojos', 'showOjos');
+    Route::get('labios', 'showLabios');
+    Route::get('tools', 'showTools');
+    Route::get('rostro', 'showRostro');
+});
 
 Route::controller(AdminController::class)->group(function(){
     Route::get('agregar', 'agre');
