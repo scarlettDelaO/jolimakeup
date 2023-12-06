@@ -121,4 +121,20 @@ class AdminController extends Controller
         $sales = Sale::with('user', 'adress')->get();
         return view('ventas', compact('sales'));
     }
+
+    public function buscarProductos(Request $request)
+    {
+        $query = $request->input('query');
+        $resultados = Product::where('name', 'LIKE', "%$query%")
+                            ->orWhere('color', 'LIKE', "%$query%")
+                            ->orWhere('brand', 'LIKE', "%$query%")
+                            ->orWhere('texture', 'LIKE', "%$query%")
+                            ->orWhere('content', 'LIKE', "%$query%")
+                            ->orWhere('price', 'LIKE', "%$query%")
+                            ->get();
+
+                            $productos = $resultados->isEmpty() ? Product::all() : $resultados;
+
+                            return view('productos', ['productos' => $productos]);
+    }
 }
