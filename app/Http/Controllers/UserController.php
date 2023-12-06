@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 use App\Models\User;
 use App\Models\Role;
@@ -17,8 +18,27 @@ class UserController extends Controller
     }
 
     public function lo(){
-    return view('login');
-}
+        return view('login');
+    }
+
+    public function iniciar(Request $request){
+        $credentials = $request->only('email', 'password');
+
+        if (Auth::attempt($credentials)) {
+            // Comprobar el role_id del usuario
+            if (Auth::users()->role_id == 1) {
+                // Admin
+                return redirect()->route('productos');
+            } else if (Auth::users()->role_id == 2) {
+                // Usuario
+                return redirect()->route('pago');
+            }
+        }
+
+        return back()->withErrors([
+            'email' => 'Las credenciales proporcionadas no coinciden con nuestros registros.',
+        ]);
+    }
 
 
     public function regi(){

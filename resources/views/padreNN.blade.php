@@ -20,7 +20,7 @@
                     <img src="imagenes/icon_casa.png" alt="Logo" style="width:37px;" class="ms-lg-4">
                 </a>
                 <div style="width: 70%"></div>
-                <a href="" class="navbar-brand text-info">
+                <a class="navbar-brand text-info" onclick="history.back()">
                     <img src="imagenes/icon_volver.png" alt="Logo" style="width:37px;">
                 </a>
         </nav>
