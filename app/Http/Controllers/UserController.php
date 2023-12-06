@@ -118,7 +118,7 @@ class UserController extends Controller
             $user->phone = $request['tel'];
             $user->country_id = $countryId; 
             $user->adress = $request['direc'];
-            $user->password = $request['contra']; 
+            $user->password = bcrypt($request['contra']);  
             $user->save();
 
     

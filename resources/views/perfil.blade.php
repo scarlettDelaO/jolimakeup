@@ -11,8 +11,9 @@
             </div>
         </div>
         <div class="col-lg-8 col-md-8 p-5 col-sm-12">
-            <form action="{{ route('perfil', $user->name) }}" method="post">
-            @csrf @method('PUT')
+        <form action="{{ route('perfil', $user->name) }}" method="post">
+          @csrf
+          @method('PUT')
             <input type="hidden" name="_method" value="PUT">
                 <div class="mb-4 mt-4">
                   <label for="nom" class="ps-2">Nombre</label>
