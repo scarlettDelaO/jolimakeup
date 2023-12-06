@@ -133,8 +133,9 @@ class AdminController extends Controller
                             ->orWhere('price', 'LIKE', "%$query%")
                             ->get();
 
-                            $productos = $resultados->isEmpty() ? Product::all() : $resultados;
+                            $products = $resultados->isEmpty() ? Product::all() : $resultados;
 
-                            return view('productos', ['productos' => $productos]);
+                            return view('productos', ['products' => $products]);
+
     }
 }

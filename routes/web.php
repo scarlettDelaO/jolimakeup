@@ -123,6 +123,20 @@ Route::controller(UserController::class)->group(function(){
 
 Route::controller(AdminController::class)->group(function(){
     Route::get('agregar', 'agre');
+    Route::post('productos', 'agregarPro');
+    Route::get('productos', 'showProd')->name('productos');
+    Route::get('modificar', 'modif');
+    Route::get('producto/{id}', 'edit')->name('modificar');
+    Route::put('producto/{id}', 'update')->name('actualizar');
+    Route::delete('producto/{id}', 'destroy')->name('eliminar');
+    Route::get('ventas', 'showVen');
+    // Agrega la ruta para buscar productos
+    Route::get('buscar-productos', [AdminController::class, 'buscarProductos'])->name('buscarProductos');
+});
+
+
+/*Route::controller(AdminController::class)->group(function(){
+    Route::get('agregar', 'agre');
     Route::post('productos','agregarPro');
     Route::get('productos', 'showProd')->name('productos');;
     Route::get('modificar','modif');
@@ -132,4 +146,4 @@ Route::controller(AdminController::class)->group(function(){
     Route::get('ventas', 'showVen');
     Route::get('productos', [AdminController::class, 'buscarProductos'])->name('buscarProductos');
 });
-
+*/
