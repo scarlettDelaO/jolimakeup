@@ -34,7 +34,7 @@ class UserController extends Controller
             if (Auth::attempt($credentials)) {
                 $request->session()->regenerate();
         
-                return redirect()->intended('perfil'); // Redirige al perfil del usuario autenticado
+                return redirect()->intended('perfil'); 
             }
         }
 
@@ -79,8 +79,6 @@ class UserController extends Controller
 
            Auth::login($user);
            return redirect('perfil');
-
-            //return view('perfil', compact('users'));
 
         } else {
             
@@ -182,5 +180,4 @@ class UserController extends Controller
         $productos = Product::with('images')->where('category_id', 2)->get();
         return view('rostro',compact('productos'));
     }
-    
 }
