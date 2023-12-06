@@ -23,32 +23,40 @@ class UserController extends Controller
         return view('registro');
     }
 
-    public function regUser(Request $request)
-    {
-        // Obtener el ID del país basado en el nombre ingresado
-        $countryName = $request['pais']; // Asumiendo que 'pais' es el campo del formulario
+    public function regUser(Request $request){
+
+        $validatedData = $request->validate([
+            'nom' => 'required|max:255', 
+            'email' => 'required|email|max:255|unique:users', 
+            'tel' => 'required|digits:10', 
+            'pais' => 'required', 
+            'direc' => 'required|max:255', 
+            'contra' => 'required|min:8|max:16', 
+        ]);
+        
+        $countryName = $request['pais']; 
         $country = Country::where('name', $countryName)->first();
 
         if ($country) {
             $countryId = $country->id;
-            // Continuar con la lógica de inserción del usuario
+            
 
             $user = new User;
             $user->role_id = 2;
             $user->name = $request['nom'];
             $user->email = $request['email'];
             $user->phone = $request['tel'];
-            $user->country_id = $countryId; // Usar el ID del país
+            $user->country_id = $countryId; 
             $user->adress = $request['direc'];
-            $user->password = bcrypt($request['contra']); // Asegúrate de encriptar la contraseña
+            $user->password = bcrypt($request['contra']); 
             $user->save();
 
             $users = User::all();
             return view('perfil', compact('users'));
 
         } else {
-            // Manejar el caso en que el país no se encuentre
-            return back()->withErrors(['pais' => 'El país ingresado no es válido.']);
+            
+            return back()->withErrors(['pais' => 'El JolyMakeup aún no esta disponible en tu país.']);
         }
     }
 
