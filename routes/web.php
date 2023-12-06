@@ -91,7 +91,7 @@ Route::get('/redirect', function () {
 // Fallback para rutas no definidas
 Route::fallback(function () {
     return view('404'); // Asumiendo que tienes una vista para errores 404
-});*/
+});*////
 
 Route::controller(UserController::class)->group(function(){
 
