@@ -16,9 +16,10 @@ class UserController extends Controller
         return view('principal');
     }
 
-    public function login(){
-        return view('login');
-    }
+    public function lo(){
+    return view('login');
+}
+
 
     public function regi(){
         return view('registro');
@@ -26,20 +27,39 @@ class UserController extends Controller
 
     public function regUser(Request $request){
 
+        $validatedData = $request->validate([
+            'nom' => 'required|max:255', 
+            'email' => 'required|email|max:255|unique:users', 
+            'tel' => 'required|digits:10', 
+            'pais' => 'required', 
+            'direc' => 'required|max:255', 
+            'contra' => 'required|min:8|max:16', 
+        ]);
+        
+        $countryName = $request['pais']; 
+        $country = Country::where('name', $countryName)->first();
 
-        $user = new User;
-        $user->role_id = 2;
-        $user->name = $request['nom'];
-        $user->email = $request['email'];
-        $user->phone=$request['tel'];
-        $user->country_id=$request['pais'];
-        $user->adress=$request['direc'];
-        $user->contra=$request['contra'];
-        $user->save();
+        if ($country) {
+            $countryId = $country->id;
+            
 
-        $user=User::all();
-        return view('perfil',compact('users'));
+            $user = new User;
+            $user->role_id = 2;
+            $user->name = $request['nom'];
+            $user->email = $request['email'];
+            $user->phone = $request['tel'];
+            $user->country_id = $countryId; 
+            $user->adress = $request['direc'];
+            $user->password = bcrypt($request['contra']); 
+            $user->save();
 
+            $users = User::all();
+            return view('perfil', compact('users'));
+
+        } else {
+            
+            return back()->withErrors(['pais' => 'El JolyMakeup aún no esta disponible en tu país.']);
+        }
     }
 
 

@@ -46,10 +46,10 @@ Route::get('/agregar', function () {
 
 Route::controller(UserController::class)->group(function(){
     Route::get('principal', 'home');
-    //Route::post('login', 'login');
-    Route::get('perfil','prueba');
-    Route::post('users','regUser');
+    Route::get('/login', 'lo');
     Route::get('perfil', 'per');
+    Route::get('/registro', 'regi');
+    Route::post('perfil', 'regUser');
     Route::get('ojos', 'cate1');
     Route::get('rostro', 'cate2');
     Route::get('labios', 'cate3');
