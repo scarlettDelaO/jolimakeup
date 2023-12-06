@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\Role;
 use App\Models\Country;
+use App\Models\Product;
+use App\Models\Images;
 
 class UserController extends Controller
 {
@@ -115,5 +117,25 @@ class UserController extends Controller
 
     public function pay(){
         return view('pago');
+    }
+
+    public function showOjos(){
+        $productos = Product::with('images')->where('category_id', 1)->get();
+        return view('ojos', compact('productos'));
+    }
+
+    public function showLabios(){
+        $productos = Product::with('images')->where('category_id', 3)->get();
+        return view('labios',compact('productos'));
+    }
+
+    public function showTools(){
+        $productos = Product::with('images')->where('category_id', 4)->get();
+        return view('tools',compact('productos'));
+    }
+
+    public function showRostro(){
+        $productos = Product::with('images')->where('category_id', 2)->get();
+        return view('rostro',compact('productos'));
     }
 }

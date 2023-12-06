@@ -58,6 +58,10 @@ Route::controller(UserController::class)->group(function(){
     Route::get('atencion', 'ate');
     Route::get('carrito', 'car');
     Route::get('pago', 'pay');
+    Route::get('ojos','showOjos');
+    Route::get('labios','showLabios');
+    Route::get('tools','showTools');
+    Route::get('rostro','showRostro');
 });
 
 Route::controller(AdminController::class)->group(function(){
