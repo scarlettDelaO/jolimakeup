@@ -125,10 +125,6 @@ class UserController extends Controller
 
 }
 
-
-
-
-
     public function cate1(){
         return view('ojos');
     }
@@ -180,10 +176,5 @@ class UserController extends Controller
         $productos = Product::with('images')->where('category_id', 2)->get();
         return view('rostro',compact('productos'));
     }
-<<<<<<< HEAD
-=======
 
-    
-    
->>>>>>> 3433049cd96b6b22c016e7c6671a3094bc5288a4
 }
