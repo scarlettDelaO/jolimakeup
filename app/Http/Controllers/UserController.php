@@ -21,7 +21,7 @@ class UserController extends Controller
         return view('login');
     }
 
-    function login(Request $request)
+    public function login(Request $request)
     {
         $credentials = $request->validate([
             'email' => 'required|email',
@@ -31,15 +31,11 @@ class UserController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            if (Auth::attempt($credentials)) {
-                $request->session()->regenerate();
-        
-                return redirect()->intended('perfil'); // Redirige al perfil del usuario autenticado
-            }
+            return redirect()->intended('perfil'); // Redirige al perfil del usuario autenticado
         }
 
         return back()->withErrors([
-            'message' => 'Correo o contraseña incorrectos, por favor intente de nuevo.',
+            'email' => 'Las credenciales proporcionadas no coinciden con nuestros registros.',
         ]);
     }
 
