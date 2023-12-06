@@ -12,7 +12,7 @@
         </div>
         <div class="col-lg-8 col-md-8 p-5 col-sm-12">
             <form action="{{ route('perfil', $user->name) }}" method="post">
-            @csrf
+            @csrf @method('PUT')
             <input type="hidden" name="_method" value="PUT">
                 <div class="mb-4 mt-4">
                   <label for="nom" class="ps-2">Nombre</label>
@@ -39,7 +39,7 @@
                     <input type="password" class="form-control" id="contr" placeholder="Enter password" name="contra" value="{{$user->password}}">
                   </div>
                 <div class=" text-end">
-                <button id="btnGuardarPerfil" type="button" class="btn btn-primary mt-3">
+                <button id="btnGuardarPerfil" type="submit" class="btn btn-primary mt-3">
                     <img src="imagenes/boton_guardar.png">
                 </button>
                 </div>
@@ -60,7 +60,7 @@
                 <div class="alerta-contenido">
                     <p>{{ session('success') }}</p>
                     <button id="botonCerrar">
-                        <img src="{{asset('imagenes/imagenes/ok.png')}}">
+                        <img src="imagenes/ok.png">
                     </button>
                 </div>
             </div>

@@ -112,7 +112,7 @@ Route::controller(UserController::class)->group(function(){
     Route::post('perfil/registrar', 'regUser'); // Ruta para registrar usuario
 
     // Ruta para el perfil del usuario autenticado
-    Route::get('perfil', 'per')->name('perfil');
+    Route::put('perfil', 'per')->name('perfil');
 
     // Rutas para mostrar categorías de productos
     Route::get('ojos', 'showOjos');
