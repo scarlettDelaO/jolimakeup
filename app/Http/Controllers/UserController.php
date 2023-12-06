@@ -31,11 +31,15 @@ class UserController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect()->intended('perfil'); // Redirige al perfil del usuario autenticado
+            if (Auth::attempt($credentials)) {
+                $request->session()->regenerate();
+        
+                return redirect()->intended('perfil'); // Redirige al perfil del usuario autenticado
+            }
         }
 
         return back()->withErrors([
-            'email' => 'Las credenciales proporcionadas no coinciden con nuestros registros.',
+            'message' => 'Correo o contraseña incorrectos, por favor intente de nuevo.',
         ]);
     }
 
@@ -70,11 +74,13 @@ class UserController extends Controller
             $user->phone = $request['tel'];
             $user->country_id = $countryId; 
             $user->adress = $request['direc'];
-            $user->password = $request['contra']; 
+            $user->password = bcrypt($request['contra']); 
             $user->save();
 
            Auth::login($user);
            return redirect('perfil');
+
+            //return view('perfil', compact('users'));
 
         } else {
             
@@ -120,6 +126,10 @@ class UserController extends Controller
         return redirect()->route('perfil')->with('success', 'Tus cambios se han guardado exitosamente. Tu perfil ha sido actualizado.');
 
 }
+
+
+
+
 
     public function cate1(){
         return view('ojos');
@@ -172,5 +182,4 @@ class UserController extends Controller
         $productos = Product::with('images')->where('category_id', 2)->get();
         return view('rostro',compact('productos'));
     }
-
 }
