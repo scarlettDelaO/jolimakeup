@@ -47,6 +47,7 @@ Route::get('/agregar', function () {
 Route::controller(UserController::class)->group(function(){
     Route::get('principal', 'home');
     Route::get('/login', 'lo');
+    Route::post('perfil', 'iniciar');
     Route::get('perfil', 'per');
     Route::get('/registro', 'regi');
     Route::post('perfil', 'regUser');
@@ -60,7 +61,7 @@ Route::controller(UserController::class)->group(function(){
 });
 
 Route::controller(AdminController::class)->group(function(){
-    Route::post('login', 'login');
+    Route::get('productos','productos')->name('productos');
     Route::get('agregar', 'agre');
     Route::post('productos','agregarPro');
     Route::get('productos', 'showProd')->name('productos');;
