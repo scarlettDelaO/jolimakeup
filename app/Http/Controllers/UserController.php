@@ -21,24 +21,28 @@ class UserController extends Controller
         return view('login');
     }
 
-    public function iniciar(Request $request){
-        $credentials = $request->only('email', 'password');
+    public function login(Request $request)
+    {
+        $credentials = $request->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
 
         if (Auth::attempt($credentials)) {
-            // Comprobar el role_id del usuario
-            if (Auth::users()->role_id == 1) {
-                // Admin
-                return redirect()->route('productos');
-            } else if (Auth::users()->role_id == 2) {
-                // Usuario
-                return redirect()->route('pago');
+            $request->session()->regenerate();
+
+            if (Auth::attempt($credentials)) {
+                $request->session()->regenerate();
+        
+                return redirect()->intended('perfil'); // Redirige al perfil del usuario autenticado
             }
         }
 
         return back()->withErrors([
-            'email' => 'Las credenciales proporcionadas no coinciden con nuestros registros.',
+            'message' => 'Correo o contraseña incorrectos, por favor intente de nuevo.',
         ]);
     }
+
 
 
     public function regi(){
@@ -70,11 +74,13 @@ class UserController extends Controller
             $user->phone = $request['tel'];
             $user->country_id = $countryId; 
             $user->adress = $request['direc'];
-            $user->password = bcrypt($request['contra']); 
+            $user->password = $request['contra']; 
             $user->save();
 
-            $users = User::all();
-            return view('perfil', compact('users'));
+           Auth::login($user);
+           return redirect('perfil');
+
+            //return view('perfil', compact('users'));
 
         } else {
             
@@ -84,8 +90,46 @@ class UserController extends Controller
 
 
     public function per(){
-        return view('perfil');
+        $user = Auth::user();
+        $user->load('country');
+        return view('perfil', compact('user'));
     }
+
+
+    public function edit($id){
+        $user = User::find($id);
+        return view('modificar', compact('user'));
+    }
+    
+    public function update(Request $request,  $id){
+        $validatedData = $request->validate([
+            'nom' => 'required|max:255', 
+            'email' => 'required|email|max:255|unique:users', 
+            'tel' => 'required|digits:10', 
+            'pais' => 'required', 
+            'direc' => 'required|max:255', 
+            'contra' => 'required|min:8|max:16', 
+        ]);
+
+        $user = User::find($id);
+
+            $user->name = $request['nom'];
+            $user->email = $request['email'];
+            $user->phone = $request['tel'];
+            $user->country_id = $countryId; 
+            $user->adress = $request['direc'];
+            $user->password = $request['contra']; 
+            $user->save();
+
+    
+
+        return redirect()->route('perfil')->with('success', 'Tus cambios se han guardado exitosamente. Tu perfil ha sido actualizado.');
+
+}
+
+
+
+
 
     public function cate1(){
         return view('ojos');

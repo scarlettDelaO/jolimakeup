@@ -5,19 +5,29 @@
         <img id="logo" src="imagenes/logo1inicio.png" alt="Logo" class="ms-lg-4">
         
         <!-- Formulario modificado para iniciar sesión -->
-        <form action="perfil" method="post" onsubmit="return validarInicio();">
+        <form action="{{ route('doLogin') }}" method="post" >
         @csrf
             <div class="form-group">
                 <br>
                 <br>
                 <label for="correo">Correo electrónico:</label>
-                <input type="email" class="form-control" id="correo" name="correo" >
+                <input type="email" class="form-control" id="email" name="email" required>
             </div>
 
             <div class="form-group">
                 <label for="contra">Contraseña:</label>
-                <input type="password" class="form-control" id="contra" name="contra" >
+                <input type="password" class="form-control" id="contra" name="password" required >
             </div>
+
+            @if($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
 
             <!-- Botón modificado para enviar el formulario -->
             
