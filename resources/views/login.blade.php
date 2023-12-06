@@ -38,6 +38,7 @@
     </div>
 </section>
 
+
 <script type="text/javascript" src="validacion.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
 @endsection
