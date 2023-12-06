@@ -105,8 +105,8 @@
         <div class="col-sm-0 col-md-2 col-lg-3 "></div>
         <div id="formulario" class="col-sm-12 col-md-8 col-lg-6 p-5 mt-5 mb-5">
             <h1 class="text-center">Modificar</h1>
-            <form action="{{ route('actualizar', $product->id) }}" method="post" class="ms-4 me-4" enctype="multipart/form-data">
-                @csrf
+            <form action="{{ route('actualizar', $product->id) }}" method="POST" class="ms-4 me-4" enctype="multipart/form-data">
+                @csrf @method('PUT')
                 <input type="hidden" name="_method" value="PUT">
             
                 <div class="mb-4 mt-4 row ps-3 pe-3 text-sm-start">
@@ -126,7 +126,7 @@
                 </div>
                 <div class="mb-4">
                     <label for="cate" class="ps-2">Categoría</label>
-                    <select id="cate" class="form-control">
+                    <select id="cate" class="form-control" name="cate">
                         <option value="" disabled selected>Seleccione una categoría</option>
                         <option value="1" {{ $product->category_id == 1 ? 'selected' : '' }}>Ojos</option> 
                         <option value="2" {{ $product->category_id == 2 ? 'selected' : '' }}>Rostro</option> 

@@ -46,10 +46,10 @@ Route::get('/agregar', function () {
 
 Route::controller(UserController::class)->group(function(){
     Route::get('principal', 'home');
-    Route::get('/login', 'lo');
+    //Route::post('login', 'login');
+    Route::get('perfil','prueba');
+    Route::post('users','regUser');
     Route::get('perfil', 'per');
-    Route::get('/registro', 'regi');
-    Route::post('perfil', 'regUser');
     Route::get('ojos', 'cate1');
     Route::get('rostro', 'cate2');
     Route::get('labios', 'cate3');
@@ -70,7 +70,7 @@ Route::controller(AdminController::class)->group(function(){
     Route::get('productos', 'showProd')->name('productos');;
     Route::get('modificar','modif');
     Route::get('producto/{id}', 'edit')->name('modificar');
-    Route::put('producto/{id}', 'update')->name('actualizar');
+    Route::PUT('producto/{id}', 'update')->name('actualizar');
     Route::delete('producto/{id}', 'destroy')->name('eliminar');
     Route::get('ventas', 'showVen');
 });

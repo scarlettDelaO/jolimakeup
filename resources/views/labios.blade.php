@@ -25,7 +25,7 @@
         @foreach($productos as $producto)
         <article class="col-lg-3 p-lg-3 pb-lg-0 ms-lg-5 me-lg-5 col-md-5 p-md-3 pb-md-0 ms-md-4 me-md-4 mb-md-5 col-sm-5 p-sm-3 pb-sm-0 ms-sm-4 me-sm-4 mb-sm-5 col-9 p-3 pb-0 ms-5 me-4 mb-5">
             <!-- Carousel -->
-            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+            <div id="demo{{$producto->id}}" class="carousel slide" data-bs-ride="carousel">
         
                 <!-- Indicators/dots -->
                 <div class="carousel-indicators">

@@ -118,4 +118,5 @@ class UserController extends Controller
         $productos = Product::with('images')->where('category_id', 2)->get();
         return view('rostro',compact('productos'));
     }
+    
 }
