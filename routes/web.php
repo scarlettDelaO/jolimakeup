@@ -78,8 +78,6 @@ Route::middleware(['admin'])->group(function () {
     Route::get('/ventas', [AdminController::class, 'showVen']);
 });
 
-
-
 // Ruta para redireccionar según el rol del usuario
 Route::get('/redirect', function () {
     if (auth()->User()->role_id == 1) {
