@@ -12,9 +12,9 @@
                             <img src="imagenes/agregar.png" alt="Agregar">
                         </button>
                     </a>
-                    <form class="d-flex" id="search-form">
-                        <input class="form-control me-2" type="text" placeholder="Buscar" id="buscar">
-                        <button id="btnBuscar" class="btn btn-primary" type="button">
+                    <form class="d-flex" id="search-form" action="{{ route('buscarProductos') }}" method="GET">
+                        <input class="form-control me-2" type="text" placeholder="Buscar" id="buscar" name="query">
+                        <button id="btnBuscar" class="btn btn-primary" type="submit">
                             <img src="imagenes/buscar.png" alt="Buscar">
                         </button>
                     </form>
@@ -35,8 +35,8 @@
                             <th></th>
                         </tr>
                     </thead>
-                    @foreach($products as $product)
                     <tbody>
+                        @forelse($productos as $product)
                         <tr>
                             <td>{{$product->id}}</td>
                             <td>{{$product->name}}</td>
@@ -55,8 +55,13 @@
                                 
                             </td>
                         </tr>
+                        @empty
+                        <!-- Si no hay productos -->
+                            <tr>
+                                <td colspan="7">No se encontraron productos.</td>
+                            </tr>
+                        @endforelse
                     </tbody>
-                    @endforeach
                 </table>
             </div>
         </div>

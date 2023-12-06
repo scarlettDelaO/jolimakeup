@@ -73,5 +73,6 @@ Route::controller(AdminController::class)->group(function(){
     Route::PUT('producto/{id}', 'update')->name('actualizar');
     Route::delete('producto/{id}', 'destroy')->name('eliminar');
     Route::get('ventas', 'showVen');
+    Route::get('productos', [AdminController::class, 'buscarProductos'])->name('buscarProductos');
 });
 
