@@ -11,30 +11,32 @@
             </div>
         </div>
         <div class="col-lg-8 col-md-8 p-5 col-sm-12">
-            <form action="/action_page.php">
+            <form action="{{ route('perfil', $user->name) }}" method="post">
+            @csrf
+            <input type="hidden" name="_method" value="PUT">
                 <div class="mb-4 mt-4">
                   <label for="nom" class="ps-2">Nombre</label>
-                  <input type="text" class="form-control" id="nom" placeholder="Enter email" name="email">
+                  <input type="text" class="form-control" id="nom" placeholder="Enter email" name="nom" value="{{$user->name}}">
                 </div>
                 <div class="mb-4">
                   <label for="email" class="ps-2">Email</label>
-                  <input type="email" class="form-control" id="email" placeholder="Enter password" name="pswd">
+                  <input type="email" class="form-control" id="email" placeholder="Enter password" name="email" value="{{$user->email}}">
                 </div>
                 <div class="mb-4">
                     <label for="tel" class="ps-2">Teléfono</label>
-                    <input type="text" class="form-control" id="tel" placeholder="Enter password" name="pswd">
+                    <input type="text" class="form-control" id="tel" placeholder="Enter password" name="tel" value="{{$user->phone}}">
                   </div>
                   <div class="mb-4">
                     <label for="pais" class="ps-2">País</label>
-                    <input type="text" class="form-control" id="pais" placeholder="Enter password" name="pswd">
+                    <input type="text" class="form-control" id="pais" placeholder="Enter password" name="pais" value="{{ $user->country->name ?? 'No definido' }}">
                   </div>
                   <div class="mb-4">
                     <label for="direc" class="ps-2">Dirección</label>
-                    <input type="text" class="form-control" id="direc" placeholder="Enter password" name="pswd">
+                    <input type="text" class="form-control" id="direc" placeholder="Enter password" name="direc" value="{{$user->adress}}">
                   </div>
                   <div class="mb-4">
                     <label for="contr" class="ps-2">Contraseña</label>
-                    <input type="password" class="form-control" id="contr" placeholder="Enter password" name="pswd">
+                    <input type="password" class="form-control" id="contr" placeholder="Enter password" name="contra" value="{{$user->password}}">
                   </div>
                 <div class=" text-end">
                 <button id="btnGuardarPerfil" type="button" class="btn btn-primary mt-3">
@@ -44,17 +46,43 @@
               </form>
         </div>
         <!-- Alerta para confirmar el cierre de sesión -->
-    <div id="alertCerrarSesion" class="alerta-oculta" style="display: none;">
-        <div class="alerta-contenido">
-            <p>Has cerrado sesión con éxito. ¡Esperamos que vuelvas pronto!</p>
-            <button id="botonCerrar">
-                <img src="imagenes/ok.png" alt="">
-            </button>
+        <div id="alertCerrarSesion" class="alerta-oculta" style="display: none;">
+            <div class="alerta-contenido">
+                <p>Has cerrado sesión con éxito. ¡Esperamos que vuelvas pronto!</p>
+                <button id="botonCerrar">
+                    <img src="imagenes/ok.png" alt="">
+                </button>
         </div>
+
+        <!-- Alerta Modificar Perfil -->
+        @if (session('success'))
+            <div id="alertModi" class="alerta-oculta">
+                <div class="alerta-contenido">
+                    <p>{{ session('success') }}</p>
+                    <button id="botonCerrar">
+                        <img src="{{asset('imagenes/imagenes/ok.png')}}">
+                    </button>
+                </div>
+            </div>
+        @endif
     </div>
     
 
 </section>
+
+<script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            if (document.getElementById('alertModi')) {
+                document.getElementById('alertModi').style.display = 'flex';
+            }
+        });
+
+
+        document.getElementById('botonCerrar').onclick = function() {
+            document.getElementById('alertModi').style.display = 'none';
+            window.location.href = 'perfil';
+        };
+    </script>
 
 <script type="text/javascript" src="cerrar.js"></script>
 @endsection
